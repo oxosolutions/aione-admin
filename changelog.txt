@@ -1,0 +1,9 @@
+*** Aione Changelog ***
+2016.09.14 - version 1.0.0.2
+ * Update - Updated Github URI for Github Updator
+ 
+2016.08.16 - version 1.0.0.1
+ * Update - Updated redux framework to 3.6.0.11
+ 
+2015.12.15 - version 1.0.0.0
+ * Initial release

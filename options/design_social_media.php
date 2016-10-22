@@ -26,7 +26,7 @@
 				 'instagram_link' => '',
 				 'pinterest_link' => '',
 				 'tumblr_link' => '',
-				 'google_link' => '+',
+				 'google_link' => '',
 				 'dribbble_link' => '',
 				 'digg_link' => '',
 				 'linkedin_link' => '',

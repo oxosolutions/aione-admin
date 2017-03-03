@@ -6,7 +6,7 @@
  *
  *********************************************************************************************/
 $this->sections[] = array(
-    'icon'      => 'el-icon-file',
+    'icon'      => 'el el-cogs',
     'title'     => __('General settings', 'redux-framework-demo'),
     'fields'    => array(
         array (
@@ -22,8 +22,8 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default' => true,
             'title' =>__('Responsive Design','redux-framework-demo'),
-            'subtitle'  => __('Responsive Design.', 'redux-framework-demo'),
-            'desc' =>__('YES to use the responsive design features. If left unchecked then the fixed layout is used.','redux-framework-demo'),
+            'subtitle'  => __('Allow webpages to be viewed in response to the size of the screen', 'redux-framework-demo'),
+            'desc' =>__('YES to Allow the responsive design features. If left unchecked then the fixed layout is used.','redux-framework-demo'),
             'hint' => array(
                 'title'   => __('Responsive Design','redux-framework-demo'),
                 'content' => __('Responsive Design','redux-framework-demo'),
@@ -36,8 +36,8 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default' => true,
             'title' =>__('Use Fixed Layout for iPad Portrait','redux-framework-demo'),
-            'subtitle'  => __('Use Fixed Layout for iPad Portrait.', 'redux-framework-demo'),
-            'desc' =>__('YES to use the fixed layout for the iPad in portrait view.','redux-framework-demo'),
+            'subtitle'  => __('Allow Fixed Layout to be viewed in iPad Portrait', 'redux-framework-demo'),
+            'desc' =>__('YES to Allow the fixed layout for the iPad in portrait view.','redux-framework-demo'),
             'hint' => array(
                 'title'   => __('Use Fixed Layout for iPad Portrait','redux-framework-demo'),
                 'content' => __('Use Fixed Layout for iPad Portrait','redux-framework-demo'),
@@ -50,7 +50,7 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default' => true,
             'title' =>__('Enable Zoom on mobile devices','redux-framework-demo'),
-            'desc' =>__('Enable to allow pinch to zoom on mobile devices.','redux-framework-demo'),
+            'desc' =>__('YES to Enable pinch to zoom on mobile devices.','redux-framework-demo'),
             'hint' => array(
                 'title'   => __('Enable Zoom on mobile devices','redux-framework-demo'),
                 'content' => __('Enable Zoom on mobile devices','redux-framework-demo'),

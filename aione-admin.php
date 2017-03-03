@@ -3,7 +3,7 @@
 Plugin Name: Aione Admin
 Plugin URI: http://oxosolutions.com/products/wordpress-plugins/aione-admin/
 Description: Aione Admin Options and Essentials
-Version: 1.0.0.5
+Version: 1.0.1.0
 Author: OXO Solutions
 Author URI: http://oxosolutions.com/
 GitHub Plugin URI: https://github.com/oxosolutions/aione-admin

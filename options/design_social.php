@@ -18,48 +18,48 @@ $this->sections[] = array(
             'id' => 'sharing_social_tagline',
             'type' => 'text',
             'title' => __('Social Sharing Box Tagline','redux-framework-demo'),
-            'subtitle'  => __('Social Sharing Box Tagline.', 'redux-framework-demo'),
+            'subtitle'  => __('Tagline for the social sharing boxes.', 'redux-framework-demo'),
             'desc' => __('Insert a tagline for the social sharing boxes.','redux-framework-demo'),
-            'default' => 'Share This Story, Choose Your Platform!',
+            'default' => '',
             'hint' => array(
                 'title'   => __('Social Sharing Box Tagline','redux-framework-demo'),
-                'content' => __('Social Sharing Box Tagline','redux-framework-demo'),
+                'content' => __('Insert a tagline for the social sharing boxes.','redux-framework-demo'),
             )
         ),
         array (
             'id' => 'social_bg_color',
             'type' => 'color',
             'title' => __('Social Share Box Background Color','redux-framework-demo'),
-            'subtitle'  => __('Social Share Box Background Color.', 'redux-framework-demo'),
-            'desc' =>  __('Controls the background color of the social share box.','redux-framework-demo'),
+            'subtitle'  => __('Controls the background color of the social share box.', 'redux-framework-demo'),
+            'desc' =>  __('Select color','redux-framework-demo'),
             'default' => '#f6f6f6',
             'hint' => array(
                 'title'   => __('Social Share Box Background Color','redux-framework-demo'),
-                'content' => __('Social Share Box Background Color','redux-framework-demo'),
+                'content' => __('Controls the background color of the social share box.','redux-framework-demo'),
             )
         ),
 		array (
             'id' => 'sharing_social_links_font_size',
             'type' => 'text',
-            'title' => __('Social Sharing Box Icons Font Size','redux-framework-demo'),
-            'subtitle'  => __('Social Sharing Box Icons Font Size.', 'redux-framework-demo'),
+            'title' => __('Social Sharing Box Icons Size','redux-framework-demo'),
+            'subtitle'  => __('Controls the Social Sharing Box Icons Size.', 'redux-framework-demo'),
             'desc' => __('In pixels, default is 16','redux-framework-demo'),
             'default' => '16',
             'hint' => array(
                 'title'   => __('Social Sharing Box Icons Font Size','redux-framework-demo'),
-                'content' => __('Social Sharing Box Icons Font Size.','redux-framework-demo'),
+                'content' => __('Controls the Social Sharing Box Icons Size.','redux-framework-demo'),
             )
         ),
         array (
             'id' => 'sharing_social_links_icon_color',
             'type' => 'color',
             'title' => __('Social Sharing Box Custom Icons Color','redux-framework-demo'),
-            'subtitle'  => __('Social Sharing Box Custom Icons Color.', 'redux-framework-demo'),
+            'subtitle'  => __('Set the Social Sharing Box Custom Icons Color.', 'redux-framework-demo'),
             'desc' =>  __('Select a custom social icon color.','redux-framework-demo'),
             'default' => '#bebdbd',
             'hint' => array(
                 'title'   => __('Social Sharing Box Custom Icons Color','redux-framework-demo'),
-                'content' => __('Social Sharing Box Custom Icons Color','redux-framework-demo'),
+                'content' => __('Set the Social Sharing Box Custom Icons Color.','redux-framework-demo'),
             )
         ),
         array (
@@ -81,36 +81,36 @@ $this->sections[] = array(
             'id' => 'sharing_social_links_box_color',
             'type' => 'color',
             'title' => __('Social Sharing Box Icons Custom Box Color','redux-framework-demo'),
-            'subtitle'  => __('Social Sharing Box Icons Custom Box Color.', 'redux-framework-demo'),
+            'subtitle'  => __('Controls Social Sharing Box Icons Custom Box Color.', 'redux-framework-demo'),
             'desc' =>  __('Select a custom social icon box color.','redux-framework-demo'),
             'default' => '#e8e8e8',
             'hint' => array(
                 'title'   => __('Social Sharing Box Icons Custom Box Color','redux-framework-demo'),
-                'content' => __('Social Sharing Box Icons Custom Box Color','redux-framework-demo'),
+                'content' => __('Controls Social Sharing Box Icons Custom Box Color.','redux-framework-demo'),
             )
         ),
         array (
             'id' => 'sharing_social_links_boxed_radius',
             'type' => 'text',
             'title' => __('Social Sharing Box Icons Boxed Radius','redux-framework-demo'),
-            'subtitle'  => __('Social Sharing Box Icons Boxed Radius.', 'redux-framework-demo'),
-            'desc' =>  __('Boxradius for the social icons. In pixels, ex: 4px.','redux-framework-demo'),
+            'subtitle'  => __('Set Box radius for the social icons box.', 'redux-framework-demo'),
+            'desc' =>  __('In pixels, eg: 4px.','redux-framework-demo'),
             'default' => '4px',
             'hint' => array(
                 'title'   => __('Social Sharing Box Icons Boxed Radius','redux-framework-demo'),
-                'content' => __('Social Sharing Box Icons Boxed Radius','redux-framework-demo'),
+                'content' => __('Set Box radius for the social icons box.','redux-framework-demo'),
             )
         ),
 		array (
             'id' => 'sharing_social_links_boxed_padding',
             'type' => 'text',
             'title' => __('Social Sharing Box Icons Boxed Padding','redux-framework-demo'),
-            'subtitle'  => __('Social Sharing Box Icons Boxed Padding.', 'redux-framework-demo'),
+            'subtitle'  => __('Controls Social Sharing Box Icons Boxed Padding.', 'redux-framework-demo'),
             'desc' => __('In pixels, default is 8','redux-framework-demo'),
             'default' => '8',
             'hint' => array(
                 'title'   => __('Social Sharing Box Icons Boxed Padding','redux-framework-demo'),
-                'content' => __('Social Sharing Box Icons Boxed Padding.','redux-framework-demo'),
+                'content' => __('Controls Social Sharing Box Icons Boxed Padding.','redux-framework-demo'),
             )
         ),
         array (
@@ -124,12 +124,12 @@ $this->sections[] = array(
                 'None' => 'None',
             ),
             'title' => __('Social Sharing Box Icons Tooltip Position','redux-framework-demo'),
-            'subtitle'  => __('Social Sharing Box Icons Tooltip Position.', 'redux-framework-demo'),
-            'desc' =>  __('Controls the tooltip position of the social icons in the sharing box.','redux-framework-demo'),
+            'subtitle'  => __('Controls the tooltip position of the social icons in the sharing box.', 'redux-framework-demo'),
+            'desc' =>  __('Select Position','redux-framework-demo'),
             'default' => 'Top',
             'hint' => array(
                 'title'   => __('Social Sharing Box Icons Tooltip Position','redux-framework-demo'),
-                'content' => __('Social Sharing Box Icons Tooltip Position','redux-framework-demo'),
+                'content' => __('Controls the tooltip position of the social icons in the sharing box.','redux-framework-demo'),
             )
         ),
         array (
@@ -145,11 +145,11 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default' => true,
             'title' => __('Facebook','redux-framework-demo'),
-            'subtitle'  => __('Facebook.', 'redux-framework-demo'),
+            'subtitle'  => __('show the facebook sharing icon in blog posts.', 'redux-framework-demo'),
             'desc' =>  __('YES to show the facebook sharing icon in blog posts.','redux-framework-demo'),
             'hint' => array(
                 'title'   => __('Facebook','redux-framework-demo'),
-                'content' => __('Facebook','redux-framework-demo'),
+                'content' => __('show the facebook sharing icon in blog posts.','redux-framework-demo'),
             )
         ),
         array (
@@ -159,11 +159,11 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default' => true,
             'title' => __('Twitter','redux-framework-demo'),
-            'subtitle'  => __('Twitter.', 'redux-framework-demo'),
+            'subtitle'  => __('show the Twitter sharing icon in blog posts.', 'redux-framework-demo'),
             'desc' =>  __('YES to show the twitter sharing icon in blog posts.','redux-framework-demo'),
             'hint' => array(
                 'title'   => __('Twitter','redux-framework-demo'),
-                'content' => __('Twitter','redux-framework-demo'),
+                'content' => __('show the Twitter sharing icon in blog posts.','redux-framework-demo'),
             )
         ),
         array (
@@ -173,11 +173,11 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default' => true,
             'title' => __('Reddit','redux-framework-demo'),
-            'subtitle'  => __('Reddit.', 'redux-framework-demo'),
+            'subtitle'  => __('show the Reddit sharing icon in blog posts.', 'redux-framework-demo'),
             'desc' =>  __('YES to show the reddit sharing icon in blog posts.','redux-framework-demo'),
             'hint' => array(
                 'title'   => __('Reddit','redux-framework-demo'),
-                'content' => __('Reddit','redux-framework-demo'),
+                'content' => __('show the Reddit sharing icon in blog posts.','redux-framework-demo'),
             )
         ),
         array (
@@ -187,11 +187,11 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default' => true,
             'title' => __('LinkedIn','redux-framework-demo'),
-            'subtitle'  => __('LinkedIn.', 'redux-framework-demo'),
+            'subtitle'  => __('show the Linkedin sharing icon in blog posts..', 'redux-framework-demo'),
             'desc' =>  __('YES to show the linkedin sharing icon in blog posts.','redux-framework-demo'),
             'hint' => array(
                 'title'   => __('LinkedIn','redux-framework-demo'),
-                'content' => __('LinkedIn','redux-framework-demo'),
+                'content' => __('show the Linkedin sharing icon in blog posts.','redux-framework-demo'),
             )
         ),
         array (
@@ -201,11 +201,11 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default' => true,
             'title' => __('Google Plus','redux-framework-demo'),
-            'subtitle'  => __('Google Plus.', 'redux-framework-demo'),
+            'subtitle'  => __('show the Google Plus sharing icon in blog posts.', 'redux-framework-demo'),
             'desc' =>  __('YES to show the g+ sharing icon in blog posts.','redux-framework-demo'),
              'hint' => array(
                 'title'   => __('Google Plus','redux-framework-demo'),
-                'content' => __('Google Plus','redux-framework-demo'),
+                'content' => __('show the Google Plus sharing icon in blog posts.','redux-framework-demo'),
             )
         ),
         array (
@@ -215,11 +215,11 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default' => true,
             'title' => __('Tumblr','redux-framework-demo'),
-            'subtitle'  => __('Tumblr.', 'redux-framework-demo'),
+            'subtitle'  => __('show the Tumblr sharing icon in blog posts.', 'redux-framework-demo'),
             'desc' =>  __('YES to show the tumblr sharing icon in blog posts.','redux-framework-demo'),
             'hint' => array(
                 'title'   => __('Tumblr','redux-framework-demo'),
-                'content' => __('Tumblr','redux-framework-demo'),
+                'content' => __('show the Tumblr sharing icon in blog posts.','redux-framework-demo'),
             )
         ),
         array (
@@ -229,11 +229,11 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default' => true,
             'title' => __('Pinterest','redux-framework-demo'),
-            'subtitle'  => __('Pinterest.', 'redux-framework-demo'),
+            'subtitle'  => __('show the Pinterest sharing icon in blog posts.', 'redux-framework-demo'),
             'desc' =>  __('YES to show the pinterest sharing icon in blog posts.','redux-framework-demo'),
             'hint' => array(
                 'title'   => __('Pinterest','redux-framework-demo'),
-                'content' => __('Pinterest','redux-framework-demo'),
+                'content' => __('show the Pinterest sharing icon in blog posts.','redux-framework-demo'),
             )
         ),
 		array (
@@ -243,11 +243,11 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default' => true,
             'title' => __('VK','redux-framework-demo'),
-            'subtitle'  => __('VK.', 'redux-framework-demo'),
+            'subtitle'  => __('show the VK sharing icon in blog posts.', 'redux-framework-demo'),
             'desc' =>  __('YES to show the vk sharing icon in blog posts.','redux-framework-demo'),
             'hint' => array(
                 'title'   => __('VK','redux-framework-demo'),
-                'content' => __('VK','redux-framework-demo'),
+                'content' => __('show the VK sharing icon in blog posts.','redux-framework-demo'),
             )
         ),
         array (
@@ -257,11 +257,11 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default' => true,
             'title' => __('Email','redux-framework-demo'),
-            'subtitle'  => __('Email.', 'redux-framework-demo'),
+            'subtitle'  => __('show the Email sharing icon in blog posts.', 'redux-framework-demo'),
             'desc' =>  __('YES to show the email sharing icon in blog posts.','redux-framework-demo'),
             'hint' => array(
                 'title'   => __('Email','redux-framework-demo'),
-                'content' => __('Email','redux-framework-demo'),
+                'content' => __('show the Email sharing icon in blog posts.','redux-framework-demo'),
             )
         ),
 

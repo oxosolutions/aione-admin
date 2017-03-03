@@ -11,7 +11,8 @@
 		'desc'      => '',
 		'fields' => array(
 			array (
-				'desc' => 'Select a skin, all color options will automatically change to the defined skin.',
+				'subtitle'      => __('Select a skin, all color options will automatically change to the defined skin.', 'redux-framework-demo'),
+				'desc' => 'Select a skin from the list',
 				'id' => 'scheme_type',
 				'type' => 'select',
 				'options' => array (
@@ -22,7 +23,8 @@
 				'default' => 'Light',
 			),
 			array (
-				'desc' => 'Select a scheme, all color options will automatically change to the defined scheme.',
+				'subtitle'      => __('Select a scheme, all color options will automatically change to the defined scheme.', 'redux-framework-demo'),
+				'desc' => 'Select a scheme from the list',
 				'id' => 'color_scheme',
 				'type' => 'select',
 				'options' => array (
@@ -41,63 +43,72 @@
 				'default' => 'Green',
 			),
 			array (
-				'desc' => 'Controls several items, ex: link hovers, highlights, and more.',
+				'subtitle'      => __('Controls several items, ex: link hovers, highlights, and more.', 'redux-framework-demo'),
+				'desc' => 'Choose your option',
 				'id' => 'primary_color',
 				'type' => 'color',
 				'title' => 'Primary Color',
 				'default' => '#a0ce4e',
 			),
 			array (
-				'desc' => 'Controls the text color of body font.',
+				'subtitle'      => __('Controls the text color of body font.', 'redux-framework-demo'),
+				'desc' => 'Choose your option',
 				'id' => 'body_text_color',
 				'type' => 'color',
 				'title' => 'Body Text Color',
 				'default' => '#747474',
 			),
 			array (
-				'desc' => 'Controls the color of all text links as well as the \'>\' in certain areas.',
+				'subtitle'      => __('Controls the color of all text links as well as the \'>\' in certain areas.', 'redux-framework-demo'),
+				'desc' => 'Choose your option',
 				'id' => 'link_color',
 				'type' => 'color',
 				'title' => 'Link Color',
 				'default' => '#333333',
 			),
 			array (
-				'desc' => 'Controls the text color of H1 headings.',
+				'subtitle'      => __('Controls the text color of H1 headings.', 'redux-framework-demo'),
+				'desc' => 'Choose your option',
 				'id' => 'h1_color',
 				'type' => 'color',
 				'title' => 'Heading 1 (H1) Font Color',
 				'default' => '#333333',
 			),
 			array (
-				'desc' => 'Controls the text color of H2 headings.',
+				'subtitle'      => __('Controls the text color of H2 headings.', 'redux-framework-demo'),
+				'desc' => 'Choose your option',
 				'id' => 'h2_color',
 				'type' => 'color',
 				'title' => 'Heading 2 (H2) Font Color',
 				'default' => '#333333',
 			),
 			array (
-				'desc' => 'Controls the text color of H3 headings.',
+				'subtitle'      => __('Controls the text color of H3 headings.', 'redux-framework-demo'),
+				'desc' => 'Choose your option',
 				'id' => 'h3_color',
 				'type' => 'color',
 				'title' => 'Heading 3 (H3) Font Color',
 				'default' => '#333333',
 			),
 			array (
-				'desc' => 'Controls the text color of H4 headings.',
+				'subtitle'      => __('Controls the text color of H4 headings.', 'redux-framework-demo'),
+				'desc' => 'Choose your option',
 				'id' => 'h4_color',
 				'type' => 'color',
 				'title' => 'Heading 4 (H4) Font Color',
 				'default' => '#333333',
 			),
 			array (
-				'desc' => 'Controls the text color of H5 headings.',
+				'subtitle'      => __('Controls the text color of H5 headings.', 'redux-framework-demo'),
+				'desc' => 'Choose your option',
 				'id' => 'h5_color',
 				'type' => 'color',
 				'title' => 'Heading 5 (H5) Font Color',
 				'default' => '#333333',
 			),
 			array (
-				'desc' => 'Controls the text color of H6 headings.',
+				'subtitle'      => __('Controls the text color of H6 headings.', 'redux-framework-demo'),
+				'desc' => 'Choose your option',
 				'id' => 'h6_color',
 				'type' => 'color',
 				'title' => 'Heading 6 (H6) Font Color',
@@ -105,6 +116,7 @@
 			),
 			
 			array (
+
 				'id' => 'slidingbar_bg_color',
 				'type' => 'info',
 				'title' => 'Sliding Bar Background Color and Opacity',
@@ -126,21 +138,24 @@
 				'raw_html' => true,
 			),
 			array (
-				'desc' => 'Controls the bottom color of the image rollover gradients.',
+				'subtitle'      => __('Controls the bottom color of the image rollover gradients.', 'redux-framework-demo'),
+				'desc' => 'choose your option',
 				'id' => 'image_gradient_bottom_color',
 				'type' => 'color',
 				'title' => 'Rollover Image Gradient Bottom Color',
 				'default' => '#a0ce4e',
 			),
 			array (
-				'desc' => 'This option controls the color of image rollover text and the icon circle backgrounds.',
+				'subtitle'      => __('This option controls the color of image rollover text and the icon circle backgrounds.', 'redux-framework-demo'),
+				'desc' => 'choose your option',
 				'id' => 'image_rollover_text_color',
 				'type' => 'color',
 				'title' => 'Rollover Image Element Color',
 				'default' => '#333333',
 			),
 			array (
-				'desc' => 'Controls the color of the icons in the rollover.',
+				'subtitle'  => __('Controls the color of the icons in the rollover.', 'redux-framework-demo'),
+				'desc' => 'choose your option',	
 				'id' => 'image_rollover_icon_color',
 				'type' => 'color',
 				'title' => 'Rollover Image Icon Color',
@@ -149,48 +164,55 @@
 			
 			
 			array (
-				'desc' => 'Controls the background color of form fields.',
+				'subtitle'  => __('Controls the background color of form fields.', 'redux-framework-demo'),
+				'desc' => 'choose your option',		
 				'id' => 'form_bg_color',
 				'type' => 'color',
 				'title' => 'Form Background Color',
 				'default' => '#ffffff',
 			),
 			array (
-				'desc' => 'Controls the text color for forms.',
+				'subtitle'  => __('Controls the text color for forms.', 'redux-framework-demo'),
+				'desc' => 'choose your option',
 				'id' => 'form_text_color',
 				'type' => 'color',
 				'title' => 'Form Text Color',
 				'default' => '#aaa9a9',
 			),
 			array (
-				'desc' => 'Controls the border color of form fields.',
+				'subtitle'  => __('Controls the border color of form fields.', 'redux-framework-demo'),
+				'desc' => 'choose your option',
 				'id' => 'form_border_color',
 				'type' => 'color',
 				'title' => 'Form Border Color',
 				'default' => '#d2d2d2',
 			),
 			array (
-				'desc' => 'Controls blog grid, timeline, portfolio boxed items and Woocommerce post box background color.',
+				'subtitle'  => __('Controls blog grid, timeline, portfolio boxed items and Woocommerce post box background color.', 'redux-framework-demo'),
+				'desc' => 'choose your option',	
 				'id' => 'timeline_bg_color',
 				'type' => 'color',
 				'title' => 'Grid Box Color',
 				'default' => 'transparent',
 			),
 			array (
-				'desc' => 'Controls blog grid, timeline, portfolio boxed items, Woocommerce post box border, divider lines, date box and border, timeline dots, timeline icon, timeline arrow.',
+				'subtitle'  => __('Controls blog grid, timeline, portfolio boxed items, Woocommerce post box border, divider lines, date box and border, timeline dots, timeline icon, timeline arrow.', 'redux-framework-demo'),
+				'desc' => 'choose your option',
 				'id' => 'timeline_color',
 				'type' => 'color',
 				'title' => 'Grid Element Color',
 				'default' => '#ebeaea',
 			),
 			array (
-				'desc' => 'Controls the background color of the load more button for ajax post loading.',
+				'subtitle'  => __('Controls the background color of the load more button for ajax post loading.', 'redux-framework-demo'),
+				'desc' => 'choose your option',
 				'id' => 'load_more_posts_button_bg_color',
 				'type' => 'color',
 				'title' => 'Load More Posts Button Color',
 				'default' => '#ebeaea',
 			),
 			array (
+				'subtitle'  => __('Disable the text shadow on rollovers.', 'redux-framework-demo'),
 				'desc' => 'Check to disable the text shadow on rollovers.',
 				'id' => 'rollover_text_shadow',
 				'type' => 'checkbox',
@@ -205,7 +227,7 @@
 	
 /*********************************************************************************************/
 $this->sections[] = array(
-    'icon'      => 'el-icon-credit-card',
+    'icon'      => 'el-icon-magic',
     'title'     => __('Header Color', 'redux-framework-demo'),
     'subsection' => true,
     'fields'    => array(
@@ -217,14 +239,16 @@ $this->sections[] = array(
             'raw' => '<h3 style=\'margin: 0;\'>Header Color Options</h3>',
         ),
 		array (
-				'desc' => 'Controls the text color of the header tagline font.',
+				'subtitle'  => __('Controls the text color of the header tagline font.', 'redux-framework-demo'),
+				'desc' => 'choose your option',
 				'id' => 'tagline_font_color',
 				'type' => 'color',
 				'title' => 'Header Tagline Font Color',
 				'default' => '#747474',
 			),
 		array (
-				'desc' => 'Controls the border colors for the header. If using left or right header position it controls the menu divider lines.',
+				'subtitle'  => __('Controls the border colors for the header. If using left or right header position it controls the menu divider lines.', 'redux-framework-demo'),
+				'desc' => 'choose your option',			
 				'id' => 'header_border_color',
 				'type' => 'color',
 				'title' => 'Header Border Color',
@@ -236,7 +260,7 @@ $this->sections[] = array(
 
 /*********************************************************************************************/
 $this->sections[] = array(
-    'icon'      => 'el-icon-credit-card',
+    'icon'      => 'el-icon-magic',
     'title'     => __('Menu Color', 'redux-framework-demo'),
     'subsection' => true,
     'fields'    => array(
@@ -405,7 +429,7 @@ $this->sections[] = array(
 
 /*********************************************************************************************/
 $this->sections[] = array(
-    'icon'      => 'el-icon-credit-card',
+    'icon'      => 'el-icon-magic',
     'title'     => __('Topbar Color', 'redux-framework-demo'),
     'subsection' => true,
     'fields'    => array(
@@ -428,7 +452,7 @@ $this->sections[] = array(
 
 /*********************************************************************************************/
 $this->sections[] = array(
-    'icon'      => 'el-icon-credit-card',
+    'icon'      => 'el-icon-magic',
     'title'     => __('Sliding Bar Color', 'redux-framework-demo'),
     'subsection' => true,
     'fields'    => array(
@@ -486,7 +510,7 @@ $this->sections[] = array(
 
 /*********************************************************************************************/
 $this->sections[] = array(
-    'icon'      => 'el-icon-credit-card',
+    'icon'      => 'el-icon-magic',
     'title'     => __('Page Title Bar Color', 'redux-framework-demo'),
     'subsection' => true,
     'fields'    => array(
@@ -524,7 +548,7 @@ $this->sections[] = array(
 
 /*********************************************************************************************/
 $this->sections[] = array(
-    'icon'      => 'el-icon-credit-card',
+    'icon'      => 'el-icon-magic',
     'title'     => __('Sidebar Color', 'redux-framework-demo'),
     'subsection' => true,
     'fields'    => array(
@@ -553,7 +577,7 @@ $this->sections[] = array(
 );
 /*********************************************************************************************/
 $this->sections[] = array(
-    'icon'      => 'el-icon-credit-card',
+    'icon'      => 'el-icon-magic',
     'title'     => __('Footer Color', 'redux-framework-demo'),
     'subsection' => true,
     'fields'    => array(
@@ -612,7 +636,7 @@ $this->sections[] = array(
 
 /*********************************************************************************************/
 $this->sections[] = array(
-    'icon'      => 'el-icon-credit-card',
+    'icon'      => 'el-icon-magic',
     'title'     => __('WooCommerce Color', 'redux-framework-demo'),
     'subsection' => true,
     'fields'    => array(

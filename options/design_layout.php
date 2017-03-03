@@ -6,8 +6,8 @@
  *********************************************************************************************/
 
  $this->sections[] = array(
-    'icon'      => 'el-icon-key',
-    'title'     => __('layout Options', 'redux-framework-demo'),
+    'icon'      => 'el el-website',
+    'title'     => __('Layout Options', 'redux-framework-demo'),
     'fields'    => array(
     
                 array (
@@ -19,8 +19,8 @@
 		    ),
 		    'type' => 'select',
 		    'title' => __('Layout','redux-framework-demo'),
-		    'subtitle'  => __('Layout.', 'redux-framework-demo'),
-		    'desc' => __('Select boxed or wide layout..','redux-framework-demo'),
+		    'subtitle'  => __('Use to set the Layout', 'redux-framework-demo'),
+		    'desc' => __('Select boxed or wide layout.','redux-framework-demo'),
 		    'default' => 'Wide',
 		    'hint' => array(
 			'title'   => __('Layout','redux-framework-demo'),
@@ -31,8 +31,8 @@
 		    'id' => 'site_width',
 		    'type' => 'text',
 		    'title' => __('Site Width','redux-framework-demo'),
-		    'subtitle'  => __('Declare the site width.', 'redux-framework-demo'),
-		    'desc' => __('Controls the overall site width. In px or %, ex: 100% or 1170px. Default value is 940px.','redux-framework-demo'),
+		    'subtitle'  => __('Controls the overall site width.', 'redux-framework-demo'),
+		    'desc' => __('In px or %, eg: 100% or 1170px. Default value is 940px.','redux-framework-demo'),
 		    'default' => '940px',
 		    'hint' => array(
 			'title'   => __('Site Width','redux-framework-demo'),
@@ -64,8 +64,8 @@
 			'id' => 'sidebar_width',
 			'type' => 'text',
 			'title' => __('Sidebar Width','redux-framework-demo'),
-			'subtitle'  => __('width of sidebar.', 'redux-framework-demo'),
-			'desc' => __('Controls the width of the sidebar. In px or %, ex: 100% or 1170px.','redux-framework-demo'),
+			'subtitle'  => __('Controls the width of the sidebar. ', 'redux-framework-demo'),
+			'desc' => __('In px or %, eg: 100% or 1170px.','redux-framework-demo'),
 			'default' => '25%',
 			'hint' => array(
 				'title'   => __('Sidebar Width','redux-framework-demo'),
@@ -77,7 +77,7 @@
 		    'type' => 'text',
 		    'title' => __('Content Width','redux-framework-demo'),
 		    'subtitle'  => __('width of content.', 'redux-framework-demo'),
-		    'desc' => __('Controls the width of the content area. In px or %, ex: 100% or 1170px.','redux-framework-demo'),
+		    'desc' => __('Controls the width of the content area. In px or %, eg: 100% or 1170px.','redux-framework-demo'),
 		    'default' => '79',
 		    'hint' => array(
 			'title'   => __('Content Width','redux-framework-demo'),
@@ -96,8 +96,8 @@
 			'id' => 'sidebar_2_1_width',
 			'type' => 'text',
 			'title' => __('Sidebar 1 Width','redux-framework-demo'),
-			'subtitle'  => __('width of sidebar1.', 'redux-framework-demo'),
-			'desc' => __('Controls the width of the sidebar 1. In px or %, ex: 100% or 1170px.','redux-framework-demo'),
+			'subtitle'  => __('Controls the width of the sidebar 1. ', 'redux-framework-demo'),
+			'desc' => __('In px or %, eg: 100% or 1170px.','redux-framework-demo'),
 			'default' => '21%',
 			'hint' => array(
 				'title'   => __('Sidebar 1 Width','redux-framework-demo'),
@@ -108,8 +108,8 @@
 			'id' => 'sidebar_2_2_width',
 			'type' => 'text',
 			'title' => __('Sidebar 2 Width','redux-framework-demo'),
-			'subtitle'  => __('width of sidebar2.', 'redux-framework-demo'),
-			'desc' => __('Controls the width of the sidebar 1. In px or %, ex: 100% or 1170px.','redux-framework-demo'),
+			'subtitle'  => __('Controls the width of the sidebar . ', 'redux-framework-demo'),
+			'desc' => __('In px or %, eg: 100% or 1170px.','redux-framework-demo'),
 			'default' => '21%',
 			'hint' => array(
 				'title'   => __('Sidebar 2 Width','redux-framework-demo'),
@@ -123,7 +123,7 @@
 		    'type' => 'text',
 		    'title' => __('Sidebar Padding','redux-framework-demo'),
 		    'subtitle'  => __('Sidebar Padding.', 'redux-framework-demo'),
-		    'desc' => __('Enter a value in px or %, ex: 10% or 20px.','redux-framework-demo'),
+		    'desc' => __('Enter a value in px or %, eg: 10% or 20px.','redux-framework-demo'),
 		    'default' => '',
 		    'hint' => array(
 			'title'   => __('Sidebar Padding','redux-framework-demo'),
@@ -135,7 +135,7 @@
 		    'type' => 'text',
 		    'title' => __('Page Content Top Padding','redux-framework-demo'),
 		    'subtitle'  => __('Page Content Top Padding.', 'redux-framework-demo'),
-		    'desc' => __('(in pixels ex: 20px).','redux-framework-demo'),
+		    'desc' => __('In pixels eg: 20px','redux-framework-demo'),
 		    'default' => '55px',
 		    'hint' => array(
 			'title'   => __('Page Content Top Padding','redux-framework-demo'),
@@ -147,7 +147,7 @@
 		    'type' => 'text',
 		    'title' => __('Page Content Bottom Padding','redux-framework-demo'),
 		    'subtitle'  => __('Page Content Bottom Padding.', 'redux-framework-demo'),
-		    'desc' => __('(in pixels ex: 20px).','redux-framework-demo'),
+		    'desc' => __('In pixels eg: 20px','redux-framework-demo'),
 		    'default' => '40px',
 		    'hint' => array(
 			'title'   => __('Page Content Bottom Padding','redux-framework-demo'),
@@ -158,8 +158,8 @@
 		    'id' => 'hundredp_padding',
 		    'type' => 'text',
 		    'title' => __('100% Width Template Left/Right Padding','redux-framework-demo'),
-		    'subtitle'  => __('100% Width Template Left/Right Padding.', 'redux-framework-demo'),
-		    'desc' => __('Select the left and right padding for the 100% width template main content area. Enter value in px. ex: 20px.','redux-framework-demo'),
+		    'subtitle'  => __('Select the left and right padding for the 100% width template main content area. ', 'redux-framework-demo'),
+		    'desc' => __('Enter value in px. eg: 20px.','redux-framework-demo'),
 		    'default' => '20px',
 		    'hint' => array(
 			'title'   => __('100% Width Template Left/Right Padding','redux-framework-demo'),

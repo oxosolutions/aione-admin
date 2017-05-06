@@ -8785,7 +8785,7 @@ $this->sections[] = array (
 					'default' => '1px',
 				),
 				array (
-					'desc' => 'Controls the outer boreder color of the content box icon border.',
+					'desc' => 'Controls the outer border color of the content box icon border.',
 					'id' => 'content_box_icon_bg_outer_border_color',
 					'type' => 'color',
 					'title' => 'Content Box Icon Background Outer Border Color',
@@ -10920,10 +10920,10 @@ $this->sections[] = array (
 					'raw' => '<h3 style=\'margin: 0;\'>General Portfolio Options</h3>',
 				),
 				array (
-					'desc' => 'Insert the number of posts to display per page.',
+					'desc' => 'Insert the number of Portfolio Items to display per page.',
 					'id' => 'portfolio_items',
 					'type' => 'text',
-					'title' => 'Number of Portfolio Items Per Page',
+					'title' => 'Set the Number of Portfolio Items to display Per Page',
 					'default' => '10',
 				),
 				array (

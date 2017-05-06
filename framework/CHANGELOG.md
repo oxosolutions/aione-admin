@@ -1,7 +1,81 @@
 # Redux Framework Changelog
 
+## 3.6.4.4
+* Fixed:    #3293 - Required not liking/hiding fields with switch default of 'false'.
+
+## 3.6.4.3
+* Fixed:    Remove leftover var_dump from the core.
+
+## 3.6.4.2
+* Fixed:    Tracking and newsletter popups were failing due to broken javascript.
+* Fixed:    #3291: Required with parent as an array not checking properly.  Someone took out my object check!! - kp
+* Modified: Date field calander now renders on .redux-container div.
+
+## 3.6.4.1
+* Updated:  googlegonts.php file.
+* Modified: = and != required statements now use typesafe comparisons.
+* Fixed:    link_color field now properly displays all color fields.
+* Added:    link_color field now included 'focus' color block.
+* Modified: Re-styled link_color field to be more inline with other fields of it's type, that is, it looks better.
+* Added:    'title' attribute to image_select field, since 'alt' was no longer working to display hover tooltip.
+* Fixed:    Default data not saving correctly in sorter field.
+
+## 3.6.4
+* WP.org release
+
+## 3.6.3.5
+* Modified: Changed gitignore file to exclude sublime text files.
+* Fixed:    #2966 - Translation bug. Identified and fixed by @iiandrade. Thanks!
+* Modified: Generated all CSS map files to get rid of Chrome warnings.
+* Added:    Required for the Advanced Customizer thanks to @britner!
+* Modified: Various customizer fixes and changes to match new styles.
+* Modified: Customizer only code in Redux.js, moved to the customizer.js file.
+* Modified: Isolated Redux CSS to be nested and not affect other products or WP UI.
+* Added:    #3222 - HUGE update by @enchiridion to allow for advanced and complicated permissions. WTG!
+* Added:    New hooks for how Extension APIs are called. Much cleaner. 
+
+## 3.6.3.4
+* Fixed:    #3214 - Typography color field not triggering compiler hook.
+
+## 3.6.3.3
+* Fixed:    #3201 - Index error when using compiler argument with spinner field.
+
+## 3.6.3.2
+* Updated:  #3189 - PHP7 compatibility for preg_replace validation.
+
+## 3.6.3.1
+* Fixed:    #3186 - Multi text field not removing single field when clicking "Remove".
+* Fixed:    #3180, #2641 - Button set multi mode saving incorrectly.  Please check your code for a possible backward compatibility issue when using this mode.  The foreach() function with an empty() check must now be used, versus individual array keys as only selected options are saved to the database.
+
+## 3.6.3
+* WP.org release
+
+## 3.6.2.3
+* Modified: Change customizer hover styles to match WP 4.7.
+
+## 3.6.2.2
+* Modified: #3169 - print_r of wpdb queries in dev_mode removed.
+
+## 3.6.2.1
+* Fixed: #3159 - Support for SVG in gallery media selection.
+* Fixed: #3158 - PHP warning for _validate_values function when extensions installed on PHP7.
+
+## 3.6.2
+* WP.org release and cleanup
+
+## 3.6.1.3
+* Fixed:   #3105 - link_color output failing due to PHP error.
+
+## 3.6.1.2
+* Fixed:   #3103 - WP 4.6 forces new default date format, breaking date validation.
+
+## 3.6.1.1
+* Fixed:   Typography subsets error due to typo.
+
+## 3.6.1 - WP.org release
+
 ## 3.6.0.11
-* Removed   Empty PHP file from editor field.
+* Removed:  Empty PHP file from editor field.
 * Modified: Replaced class primary function name in browser.php to __construct for PHP7 compatibility.
 
 ## 3.6.0.10

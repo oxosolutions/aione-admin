@@ -459,7 +459,7 @@
                 'type'     => 'multi_text',
                 'title'    => __( 'Multi Text Option', 'redux-framework-demo' ),
                 'subtitle' => __( 'Field subtitle', 'redux-framework-demo' ),
-                'desc'     => __( 'Field Decription', 'redux-framework-demo' )
+                'desc'     => __( 'Field Decription', 'redux-framework-demo' ),
             ),
         )
     ) );

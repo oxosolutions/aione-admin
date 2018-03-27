@@ -3,8 +3,8 @@ Contributors: dovyp, kprovance
 Donate link: http://ideas.reduxframework.com
 Tags: admin, admin interface, options, theme options, plugin options, options framework, settings, web fonts, google fonts
 Requires at least: 3.5.1
-Tested up to: 4.8
-Stable tag: 3.6.5
+Tested up to: 4.9.2
+Stable tag: 3.6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -124,6 +124,38 @@ That's because the real FAQ section is on our site! Please visit [http://docs.re
 1. This is the demo mode of Redux Framework. Activate it and you will find a fully-functional admin panel that you can play with. On the Plugins page, beneath the description and an activated Redux Framework, you will find a Demo Mode link. Click that link to activate or deactivate the sample-config file Redux ships with.  Don't take our word for it, check out our online demo and try Redux without installing a thing! [**http://demo.reduxframework.com/wp-admin/**](http://demo.reduxframework.com/wp-admin/)
 
 == Changelog ==
+## 3.6.8
+* Fixed:    Error in AJAX save due to incorrect object reference in redux.js.
+* Fixed:    Removed unused set_transient in welcome routine.  It was causing slow queries.
+* Updated:  Google Font update.
+* Fixed:    #3440: Parent object not being properly set in the Redux filesystem.
+* Fixed:    Color picker CSS issues as a result of WP 4.9.
+* Fixed:    #3429 - Select2 Sortable needed jQuery Sortable dependency.
+* Fixed:    Admin noticies when multiple instances of Redux running not displaying per panel.
+
+## 3.6.7.7
+* Fixed:    Filesystem path correction.
+* Fixed:    #3414: Incorrect classname causing an error on load, via the filesystem API.
+* Fixed:    #3413 - Restored old code allowing non array value for mode. This is for backward compatibility 
+            only and is unsupported.
+* Fixed:    #3410, #3409 - Dimensions field output causing index errors when mode not set in option array.
+* Fixed:    #3406 - javascript hasClass improperly used, affected customizer.
+* Fixed:    Array declarations PHP 7.1 now requires.
+* Updated:  Updated newsletter subscribe submit to support our newer newsletter server.
+* Fixed:    #3379 - select_image field not properly displaying default.  'default' arg must now be the 
+            full path to default image.
+* Updated:  Google Fonts.
+
+## 3.6.6
+* Misspelled class name is system info compiler causing System Status to fail.
+* #3359 - Responsive issue on option panel.  Too much blank space on panel in smartphone mode.
+* #2914, #3356 - Default image_select preset image not selected.  This was originally by design.  Now it's a thing.
+* Update:   Parsedown.php for PHP 7.x
+* Fixed:    System status improperly reporting writable status on upload folder.
+* Fixed:    #3124 - User submitted 'current_user_can' failing on PHP version <= 3.5.13.  Thanks for the assist, @sourabgupta88
+* Modified: #3321 - Font subset in typography not rendering on IE and Edge (Seriously?  People still use those?)
+* Modified: PHP7 compatibility.
+
 ## 3.6.5
 * Modified: #3321 - Font subset in typography not rendering on IE and Edge (Seriously?  People still use those?)
 * Fixed:    #3293 - Required not liking/hiding fields with switch default of 'false'.

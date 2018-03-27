@@ -69,7 +69,7 @@
             // Please update the build number with each push, no matter how small.
             // This will make for easier support when we ask users what version they are using.
 
-            public static $_version = '3.6.5.2';
+            public static $_version = '3.6.8';
             public static $_dir;
             public static $_url;
             public static $_upload_dir;
@@ -206,7 +206,6 @@
                 // Pass parent pointer to function helper.
                 Redux_Functions::$_parent     = $this;
                 Redux_CDN::$_parent           = $this;
-                Redux_Admin_Notices::$_parent = $this;
 
                 // Set values
                 $this->set_default_args();
@@ -253,8 +252,6 @@
                     $this->args['save_defaults'] = false;
                 }
 
-                $this->change_demo_defaults();
-
                 if ( ! empty ( $this->args['opt_name'] ) ) {
                     /**
                      * SHIM SECTION
@@ -276,6 +273,21 @@
                         unset ( $this->args['page_type'] );
                     }
 
+                    // Auto create the page_slug appropriately
+                    if ( empty( $this->args['page_slug'] ) ) {
+                        if ( ! empty( $this->args['display_name'] ) ) {
+                            $this->args['page_slug'] = sanitize_html_class( $this->args['display_name'] );
+                        } else if ( ! empty( $this->args['page_title'] ) ) {
+                            $this->args['page_slug'] = sanitize_html_class( $this->args['page_title'] );
+                        } else if ( ! empty( $this->args['menu_title'] ) ) {
+                            $this->args['page_slug'] = sanitize_html_class( $this->args['menu_title'] );
+                        } else {
+                            $this->args['page_slug'] = str_replace( '-', '_', $this->args['opt_name'] );
+                        }
+                    }
+                    
+                    $this->change_demo_defaults();
+                    
                     // Get rid of extra_tabs! Not needed.
                     if ( is_array( $extra_tabs ) && ! empty ( $extra_tabs ) ) {
                         foreach ( $extra_tabs as $tab ) {
@@ -410,7 +422,7 @@
                         require_once 'core/dashboard.php';
                         new reduxDashboardWidget( $this );
 
-                        if ( ! isset ( $GLOBALS['redux_notice_check'] ) ) {
+                        if ( ! isset ( $GLOBALS['redux_notice_check'] ) || $GLOBALS['redux_notice_check'] == 0 ) {
                             require_once 'core/newsflash.php';
 
                             $params = array(
@@ -596,13 +608,13 @@
             public function _update_check() {
                 // Only one notice per instance please
                 if ( ! isset ( $GLOBALS['redux_update_check'] ) ) {
-                    Redux_Functions::updateCheck( self::$_version );
+                    Redux_Functions::updateCheck($this, self::$_version );
                     $GLOBALS['redux_update_check'] = 1;
                 }
             }
 
             public function _admin_notices() {
-                Redux_Admin_Notices::adminNotices( $this->admin_notices );
+                Redux_Admin_Notices::adminNotices($this, $this->admin_notices );
             }
 
             public function _dismiss_admin_notice() {
@@ -1289,19 +1301,6 @@
 //                        $this->dev_mode_forced  = false;
 //                        $this->args['dev_mode'] = false;
 //                    }
-                }
-
-                // Auto create the page_slug appropriately
-                if ( empty( $this->args['page_slug'] ) ) {
-                    if ( ! empty( $this->args['display_name'] ) ) {
-                        $this->args['page_slug'] = sanitize_html_class( $this->args['display_name'] );
-                    } else if ( ! empty( $this->args['page_title'] ) ) {
-                        $this->args['page_slug'] = sanitize_html_class( $this->args['page_title'] );
-                    } else if ( ! empty( $this->args['menu_title'] ) ) {
-                        $this->args['page_slug'] = sanitize_html_class( $this->args['menu_title'] );
-                    } else {
-                        $this->args['page_slug'] = str_replace( '-', '_', $this->args['opt_name'] );
-                    }
                 }
 
                 if ( isset( $this->args['customizer_only'] ) && $this->args['customizer_only'] == true ) {
@@ -3978,6 +3977,8 @@
              * @return  array $merged
              */
             function redux_array_merge_recursive_distinct( array $array1, array $array2 ) {
+                $merged = array();
+                
                 $merged = $array1;
 
                 foreach ( $array2 as $key => $value ) {
@@ -4014,39 +4015,47 @@
                         foreach ( $this->args['share_icons'] as $idx => $arr ) {
                             if ( is_array( $arr ) && ! empty( $arr ) ) {
                                 foreach ( $arr as $x => $y ) {
-                                    if ( strpos( strtolower( $y ), 'redux' ) !== false ) {
-                                        $msg = __( '<strong>Redux Framework Notice: </strong>There are references to the Redux Framework support site in your config\'s <code>share_icons</code> argument.  This is sample data.  Please change or remove this data before shipping your product.', 'redux-framework' );
-                                        $this->display_arg_change_notice( 'share', $msg );
-                                        $this->omit_share_icons = true;
+                                    if (!$this->omit_share_icons) {
+                                        if ( strpos( strtolower( $y ), 'redux' ) !== false ) {
+                                            $msg = __( '<strong>Redux Framework Notice: </strong>There are references to the Redux Framework support site in your config\'s <code>share_icons</code> argument.  This is sample data.  Please change or remove this data before shipping your product.', 'redux-framework' );
+                                            $this->display_arg_change_notice( 'share', $msg );
+                                            $this->omit_share_icons = true;
+                                            continue;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-
                 }
             }
 
             private function display_arg_change_notice( $mode, $msg = '' ) {
                 if ( $mode == 'admin' ) {
                     if ( ! $this->omit_admin_items ) {
-                        $this->admin_notices[] = array(
-                            'type'    => 'error',
-                            'msg'     => $msg,
-                            'id'      => 'admin_config',
-                            'dismiss' => true,
+                        $data = array(
+                            'parent'    => $this,
+                            'type'      => 'error',
+                            'msg'       => $msg,
+                            'id'        => 'admin_config',
+                            'dismiss'   => true
                         );
+                        
+                        Redux_Admin_Notices::set_notice($data);
                     }
                 }
 
                 if ( $mode == 'share' ) {
                     if ( ! $this->omit_share_icons ) {
-                        $this->admin_notices[] = array(
-                            'type'    => 'error',
-                            'msg'     => $msg,
-                            'id'      => 'share_config',
-                            'dismiss' => true,
+                        $data = array(
+                            'parent'    => $this,
+                            'type'      => 'error',
+                            'msg'       => $msg,
+                            'id'        => 'share_config',
+                            'dismiss'   => true
                         );
+                        
+                        Redux_Admin_Notices::set_notice($data);
                     }
                 }
             }
@@ -4124,7 +4133,8 @@
              */
             public static function user_can( $user, $capabilities, $object_id = null ) {
                 static $depth = 0;
-
+                $args = array();
+                
                 if ( $depth >= 30 ) {
                     return false;
                 }

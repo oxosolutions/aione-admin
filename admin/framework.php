@@ -294,7 +294,7 @@ if (!class_exists('aione_theme_options')) {
 			
             require_once(dirname(__FILE__). '/options/test.php');
             
-            require_once(dirname(__FILE__). '/options/design_general.php');
+            /*require_once(dirname(__FILE__). '/options/design_general.php');
 			
 			require_once(dirname(__FILE__). '/options/design_layout.php');
             require_once(dirname(__FILE__). '/options/design_header.php');
@@ -312,7 +312,7 @@ if (!class_exists('aione_theme_options')) {
             require_once(dirname(__FILE__). '/options/design_seo.php');
             require_once(dirname(__FILE__). '/options/design_social.php');
 
-            require_once(dirname(__FILE__). '/options/design_options.php');
+            require_once(dirname(__FILE__). '/options/design_options.php');*/
 			
 
 

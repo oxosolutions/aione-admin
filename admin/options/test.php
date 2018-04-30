@@ -48,7 +48,8 @@ $json_data = file_get_contents('http://aioneframework.scolm.com/api/dataset/3075
        
       $sections[$section_id] = $temp[0];
       
-      $this->sections[] = $temp[0];
+      $this->sections[] = $temp[0]; 
+      
     }    
     
     //$this->sections[] = $sections['general_settings'];

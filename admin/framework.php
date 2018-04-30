@@ -461,8 +461,10 @@ if (!class_exists('aione_theme_options')) {
                 'page_parent_post_type' => 'your_post_type',
                 'page_priority' => '56',
 				//'settings_api' => 'true',
-                'customizer' => '1',
-                'default_show' => '1',
+                //'customizer' => '1',
+                //'default_show' => '1',
+                'customizer' => true,
+                'default_show' => true,
                 'default_mark' => '<span class="default-mark"><i class="el el-icon-ok-sign"></i></span>',
                 'google_api_key' => 'NO_API_USED',
                 'class' => 'design-settings',
@@ -478,40 +480,7 @@ if (!class_exists('aione_theme_options')) {
 </style>
 '),
                 'hints' =>
-                    /*
-                     *
-                     array(
-                        'icon'              => 'icon-question-sign',
-                        'icon_position'     => 'right',
-                        'icon_color'        => 'lightgray',
-                        'icon_size'         => 'normal',
-
-                        'tip_style'         => array(
-                            'color'     => 'light',
-                            'shadow'    => true,
-                            'rounded'   => false,
-                            'style'     => '',
-                        ),
-                        'tip_position'      => array(
-                            'my' => 'top left',
-                            'at' => 'bottom left',
-                        ),
-                        'tip_effect' => array(
-                            'show' => array(
-                                'effect'    => 'slide',
-                                'duration'  => '500',
-                                'event'     => 'mouseover',
-                            ),
-                            'hide' => array(
-                                'effect'    => 'slide',
-                                'duration'  => '500',
-                                'event'     => 'click mouseleave',
-                            ),
-                        ),
-                    ),
-                    */
-
-                array(
+                 array(
                   'icon' => 'el el-question-sign',
                   'icon_position' => 'right',
                   //'icon_color' => '#0074a2',
@@ -552,7 +521,8 @@ if (!class_exists('aione_theme_options')) {
                 'global_variable' => 'theme_options',
                 'page_icon' => 'icon-themes',
                 'page_permissions' => 'manage_options',
-                'save_defaults' => '1',
+                'save_defaults' => true,
+                //'save_defaults' => '1',
                 'show_import_export' => '1',
                 'transient_time' => '3600',
                 'network_sites' => '1',

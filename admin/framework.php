@@ -294,6 +294,7 @@ if (!class_exists('aione_theme_options')) {
             require_once(dirname(__FILE__). '/options/design_page_title_bar.php');
             require_once(dirname(__FILE__). '/options/design_page.php');
             require_once(dirname(__FILE__). '/options/design_footer.php');
+            require_once(dirname(__FILE__). '/options/design_custom_css.php');
 
             //require_once(dirname(__FILE__). '/options/options.php');
 			

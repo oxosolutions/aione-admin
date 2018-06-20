@@ -67,11 +67,6 @@ class Aione_Admin_Admin {
 		if (file_exists(dirname(__FILE__).'/framework.php')) {
 			require_once( dirname(__FILE__).'/framework.php' );
 		}
-
-		// Load the theme/plugin options
-		if (file_exists(dirname(__FILE__).'/content.php')) {
-			require_once( dirname(__FILE__).'/content.php' );
-		}
 		
 		add_shortcode( 'aione-options', array($this, 'aione_options_shortcode') );
 

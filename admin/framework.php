@@ -289,6 +289,7 @@ if (!class_exists('aione_theme_options')) {
 
 
             // ACTUAL DECLARATION OF SECTIONS
+            require_once(dirname(__FILE__). '/options/design_general.php');
             require_once(dirname(__FILE__). '/options/design_header.php');
             require_once(dirname(__FILE__). '/options/design_slider.php');
             require_once(dirname(__FILE__). '/options/design_page_title_bar.php');

@@ -15,9 +15,7 @@ $this->sections[] = array(
             'title' =>  __('Layout', 'redux-framework-demo'),
             'subtitle'  => __('Layout', 'redux-framework-demo'),
             'desc' => __('', 'redux-framework-demo'),
-            'default'   => true,
-            'compiler' => array(''),
-            'required' => array(),
+            'default'   => 'wide',
             'options'  => array(
                 'boxed' => __('Boxed','redux-framework-demo'),
                 'wide' => __('Wide','redux-framework-demo'),
@@ -33,11 +31,28 @@ $this->sections[] = array(
             'title' =>  __('Site Width', 'redux-framework-demo'),
             'subtitle'  => __('Site Width', 'redux-framework-demo'),
             'desc' => __('Site Width like 100% or 1170px', 'redux-framework-demo'),
-            'compiler' => array(''),
-            'required' => array('page_title_bar','equals','1'),
+            'default'   => '1170px',
             'hint' => array(
                 'title'   => __('Site Width','redux-framework-demo'),
                 'content' => __('Site Width','redux-framework-demo'),
+            )
+        ),
+        array (
+            'id' => 'color_scheme',
+            'type' => 'select',
+            'title' =>  __('Select Color Scheme', 'redux-framework-demo'),
+            'subtitle'  => __('Select Color Scheme', 'redux-framework-demo'),
+            'desc' => __('Select Color Scheme', 'redux-framework-demo'),
+            'options' => array(
+                'default' => __('Default','redux-framework-demo'),
+                'red' => __('Red','redux-framework-demo'),               
+                'green' => __('Green','redux-framework-demo'),               
+                'blue' => __('Blue','redux-framework-demo'),               
+                ),
+            'default' => 'default',
+            'hint' => array(
+                'title'   => __('','redux-framework-demo'),
+                'content' => __('','redux-framework-demo'),
             )
         ),
     )

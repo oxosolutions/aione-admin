@@ -7,8 +7,14 @@
 $this->sections[] = array(
     'icon'      => 'el-icon-cogs',
     'title'     => __('Header Settings', 'redux-framework-demo'),
-    //'desc' => __('Header Settings', 'redux-framework-demo'),
     'fields'    => array(
+        array (
+            'id' => 'top_bar_settings',
+            'icon' => false,
+            'type' => 'info',
+            'style' => 'default',
+            'raw' => '<h3 style=\'margin: 0;\'>Top Bar Settings</h3>',
+        ),
         array (
             'id' => 'show_top_bar',
             'type' => 'switch',
@@ -41,6 +47,64 @@ $this->sections[] = array(
             )
         ),
         array (
+            'id' => 'top_bar_customize_enable',
+            'type' => 'switch',
+            'title' =>  __('Customize Top Bar', 'redux-framework-demo'),
+            'subtitle'  => __('Set Yes to Customize Top Bar', 'redux-framework-demo'),
+            'desc' => __('Default value is <strong>NO</strong>.', 'redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default'   => 0,
+            'required' => array('show_top_bar','equals','1'),
+            'hint' => array(
+                'title'   => __('','redux-framework-demo'),
+                'content' => __('','redux-framework-demo'),
+            )
+        ),
+        array(
+            'id'       => 'top_bar_background_color',
+            'type'     => 'color',
+            'title'    => __('Top Bar Background Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a background color for topbar (default: #fff).', 'redux-framework-demo'),
+            'default'  => '#FFFFFF',
+            'validate' => 'color',
+            'required' => array('top_bar_customize_enable','equals','1'),
+        ),
+        array(
+            'id'       => 'top_bar_text_color',
+            'type'     => 'color',
+            'title'    => __('Top Bar Text Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a text color for topbar (default: #333).', 'redux-framework-demo'),
+            'default'  => '#333',
+            'validate' => 'color',
+            'required' => array('top_bar_customize_enable','equals','1'),
+        ),
+        array(
+            'id'       => 'top_bar_link_color',
+            'type'     => 'color',
+            'title'    => __('Top Bar Link Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a link color for topbar (default: #333).', 'redux-framework-demo'),
+            'default'  => '#333',
+            'validate' => 'color',
+            'required' => array('top_bar_customize_enable','equals','1'),
+        ),
+        array(
+            'id'       => 'top_bar_link_hover_color',
+            'type'     => 'color',
+            'title'    => __('Top Bar Link Hover Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a link hover color for topbar (default: #333).', 'redux-framework-demo'),
+            'default'  => '#333',
+            'validate' => 'color',
+            'required' => array('top_bar_customize_enable','equals','1'),   
+        ),
+        array (
+            'id' => 'header_settings',
+            'icon' => false,
+            'type' => 'info',
+            'style' => 'default',
+            'raw' => '<h3 style=\'margin: 0;\'>Header Settings</h3>',
+        ),
+        array (
             'id' => 'header_enable',
             'type' => 'switch',
             'title' =>  __('Show header', 'redux-framework-demo'),
@@ -64,6 +128,24 @@ $this->sections[] = array(
             'hint' => array(
                 'title'   => __('100% Header Width','redux-framework-demo'),
                 'content' => __('Select Yes to set the header to 100% of the browser width. Uncheck to follow site width. Only works with wide layout mode.','redux-framework-demo'),
+            )
+        ),
+        array (
+            'id' => 'header_position',
+            'type' => 'select',
+            'title' =>  __('Select Header Position', 'redux-framework-demo'),
+            'subtitle'  => __('Select Header Position', 'redux-framework-demo'),
+            'desc' => __('Select Header Position', 'redux-framework-demo'),
+            'default' => 'top',
+            'required' => array('header_enable','equals','1'),
+            'options' => array(
+                'top' => 'Top',                 
+                'left' => 'Left',                 
+                'right' => 'Right',                 
+                ),
+            'hint' => array(
+                'title'   => __('','redux-framework-demo'),
+                'content' => __('','redux-framework-demo'),
             )
         ),
         array (
@@ -115,22 +197,6 @@ $this->sections[] = array(
             )
         ),
         array (
-            'id' => 'header_show_navigation',
-            'type' => 'switch',
-            'title' =>  __('Show Naviagtion', 'redux-framework-demo'),
-            'subtitle'  => __('Enable Navigation on header', 'redux-framework-demo'),
-            'desc' => __('', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 1,
-            'compiler' => array('header_show_navigation_class'),
-            'required' => array('header_enable','equals','1'),
-            'hint' => array(
-                'title'   => __('Show Navigation','redux-framework-demo'),
-                'content' => __('Navigation is the main\/primary menu on your website header. Choose <strong>YES<\/strong> to show Navigation on the header, Choose <strong>NO<\/strong> to remove it. Default value is <strong>YES<\/strong>.','redux-framework-demo'),
-            )
-        ),
-        array (
             'id' => 'header_show_banner',
             'type' => 'switch',
             'title' =>  __('Show Banner', 'redux-framework-demo'),
@@ -138,7 +204,7 @@ $this->sections[] = array(
             'desc' => __('', 'redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 1,
+            'default'   => 0,
             'compiler' => array('header_show_banner_class'),
             'required' => array('header_enable','equals','1'),
             'hint' => array(
@@ -154,7 +220,7 @@ $this->sections[] = array(
             'desc' => __('', 'redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 1,
+            'default'   => 0,
             'compiler' => array('header_transparent_class'),
             'required' => array('header_enable','equals','1'),
             'hint' => array(
@@ -170,7 +236,7 @@ $this->sections[] = array(
             'desc' => __('Select YES to enable a fixed header when scrolling, NO to disable', 'redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 1,
+            'default'   => 0,
             'compiler' => array(''),
             'required' => array('header_enable','equals','1'),
             'hint' => array(
@@ -186,7 +252,7 @@ $this->sections[] = array(
             'desc' => __('Select YES to enable a fixed header when scrolling on tablets, NO to disable', 'redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 1,
+            'default'   => 0,
             'compiler' => array(''),
             'required' => array('header_enable','equals','1'),
             'hint' => array(
@@ -202,7 +268,7 @@ $this->sections[] = array(
             'desc' => __('Select YES to enable a fixed header when scrolling on mobiles, NO to disable', 'redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 1,
+            'default'   => 0,
             'compiler' => array(''),
             'required' => array('header_enable','equals','1'),
             'hint' => array(
@@ -210,15 +276,7 @@ $this->sections[] = array(
                 'content' => __('Select YES to enable a fixed header when scrolling on Mobiles, NO to disable','redux-framework-demo'),
             )
         ),
-    )
-   
-);
-/*********************************************************************************************/
-$this->sections[] = array(
-    'icon'      => 'el-icon-plus',
-    'title'     => __('Sliding Bar', 'redux-framework-demo'),
-    'subsection' => true,
-    'fields'    => array(
+
         array (
             'id' => 'slidingbar_widgets',
             'type' => 'switch',
@@ -227,7 +285,7 @@ $this->sections[] = array(
             'desc' => __('', 'redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => false,
+            'default'   => 0,
             'compiler' => array(),
             'required' => array(),
             'hint' => array(
@@ -243,7 +301,7 @@ $this->sections[] = array(
             'desc' => __('Disable the top Sliding Bar on mobile devices.', 'redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => false,
+            'default'   => 0,
             'compiler' => array(''),
             'required' => array('slidingbar_widgets','equals','1'),
             'hint' => array(
@@ -252,140 +310,57 @@ $this->sections[] = array(
             )
         ),
         array (
-            'id' => 'slidingbar_top_border',
+            'id' => 'header_customize_enable',
             'type' => 'switch',
-            'title' =>  __('Enable Top Border on Sliding Bar', 'redux-framework-demo'),
-            'subtitle'  => __('Enable Top Border on Sliding Bar', 'redux-framework-demo'),
-            'desc' => __('YES to Enable a top border on the Sliding Bar.', 'redux-framework-demo'),
+            'title' =>  __('Customize Header', 'redux-framework-demo'),
+            'subtitle'  => __('Set Yes to Customize Header', 'redux-framework-demo'),
+            'desc' => __('Default value is <strong>NO</strong>.', 'redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => false,
-            'compiler' => array(''),
-            'required' => array('slidingbar_widgets','equals','1'),
+            'default'   => 0,
+            'required' => array('header_enable','equals','1'),
             'hint' => array(
-                'title'   => __('Enable Top Border on Sliding Bar','redux-framework-demo'),
-                'content' => __('Enable Top Border on Sliding Bar','redux-framework-demo'),
+                'title'   => __('','redux-framework-demo'),
+                'content' => __('','redux-framework-demo'),
             )
         ),
-        array (
-            'id' => 'slidingbar_bg_color_transparency',
-            'type' => 'switch',
-            'title' =>  __('Enable Transparency on the Sliding Bar', 'redux-framework-demo'),
-            'subtitle'  => __('Enable Transparency on the Sliding Bar', 'redux-framework-demo'),
-            'desc' => __('Check the box to enable transparency on the Sliding Bar.', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => false,
-            'compiler' => array(''),
-            'required' => array('slidingbar_widgets','equals','1'),
-            'hint' => array(
-                'title'   => __('Enable Transparency on the Sliding Bar','redux-framework-demo'),
-                'content' => __('Enable Transparency on the Sliding Bar.','redux-framework-demo'),
-            )
+        array(
+            'id'       => 'header_background_color',
+            'type'     => 'color',
+            'title'    => __('Header Background Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a background color for header (default: #fff).', 'redux-framework-demo'),
+            'default'  => '#FFFFFF',
+            'validate' => 'color',
+            'required' => array('header_customize_enable','equals','1'),
         ),
-        array (
-            'id' => 'slidingbar_open_on_load',
-            'type' => 'switch',
-            'title' =>  __('Sliding Bar Open On Page Load', 'redux-framework-demo'),
-            'subtitle'  => __('Sliding Bar Open On Page Load', 'redux-framework-demo'),
-            'desc' => __('Check the box to have the sliding bar open when the page loads.', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => false,
-            'compiler' => array(''),
-            'required' => array('slidingbar_widgets','equals','1'),
-            'hint' => array(
-                'title'   => __('Sliding Bar Open On Page Load','redux-framework-demo'),
-                'content' => __('Sliding Bar Open On Page Load','redux-framework-demo'),
-            )
-        )
-    )
-);
-/*********************************************************************************************/
-$this->sections[] = array(
-    'icon'      => 'el el-th',
-    'title'     => __('Main Menu', 'redux-framework-demo'),
-    'subsection' => true,
-    'fields'    => array(
-        array (
-            'id' => 'main_nav_show_home_icon',
-            'type' => 'switch',
-            'title' =>  __('Show Home Icon', 'redux-framework-demo'),
-            'subtitle'  => __('Enable home icon on main menu', 'redux-framework-demo'),
-            'desc' => __('', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => true,
-            'compiler' => array('main_nav_show_home_icon'),
-            'required' => array('header_show_navigation','equals','1'),
-            'hint' => array(
-                'title'   => __('Show Home Icon','redux-framework-demo'),
-                'content' => __('This option Enables\/Disables <strong>Home Icon<\/strong> on main menu. Choose <strong>YES<\/strong> to home icon on main menu, Choose <strong>NO<\/strong> to remove it. Default value is <strong>YES<\/strong>','redux-framework-demo'),
-            )
+        array(
+            'id'       => 'header_text_color',
+            'type'     => 'color',
+            'title'    => __('Header Text Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a Text color for header (default: #333).', 'redux-framework-demo'),
+            'default'  => '#333',
+            'validate' => 'color',
+            'required' => array('header_customize_enable','equals','1'),
         ),
-        array (
-            'id' => 'main_nav_show_home_link',
-            'type' => 'switch',
-            'title' =>  __('Show Home Link', 'redux-framework-demo'),
-            'subtitle'  => __('Enable home link on main menu', 'redux-framework-demo'),
-            'desc' => __('', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => true,
-            'compiler' => array('main_nav_show_home_link'),
-            'required' => array('header_show_navigation','equals','1'),
-            'hint' => array(
-                'title'   => __('Show Home link','redux-framework-demo'),
-                'content' => __('This option Enables\/Disables <strong>Home link<\/strong> on main menu. Choose <strong>YES<\/strong> to home link on main menu, Choose <strong>NO<\/strong> to remove it. Default value is <strong>YES<\/strong>','redux-framework-demo'),
-            )
+        array(
+            'id'       => 'header_link_color',
+            'type'     => 'color',
+            'title'    => __('Header Link Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a link color for header (default: #333).', 'redux-framework-demo'),
+            'default'  => '#333',
+            'validate' => 'color',
+            'required' => array('header_customize_enable','equals','1'),
         ),
-        array (
-            'id' => 'main_nav_show_description',
-            'type' => 'switch',
-            'title' =>  __('Show Menu Description', 'redux-framework-demo'),
-            'subtitle'  => __('Enable menu description on main menu', 'redux-framework-demo'),
-            'desc' => __('', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => true,
-            'compiler' => array('main_nav_show_description'),
-            'required' => array('header_show_navigation','equals','1'),
-            'hint' => array(
-                'title'   => __('Show Menu Description','redux-framework-demo'),
-                'content' => __('This option Enables\/Disables <strong>Description<\/strong> on main menu. Choose <strong>YES<\/strong> to show description on main menu, Choose <strong>NO<\/strong> to remove it. Default value is <strong>NO<\/strong>','redux-framework-demo'),
-            )
-        ),
-        array (
-            'id' => 'main_nav_search_icon',
-            'type' => 'switch',
-            'title' =>  __('Show Search Icon in Main Menu', 'redux-framework-demo'),
-            'subtitle'  => __('Enable Search on main menu', 'redux-framework-demo'),
-            'desc' => __('', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => true,
-            'compiler' => array('main_nav_show_search_icon'),
-            'required' => array('header_show_navigation','equals','1'),
-            'hint' => array(
-                'title'   => __('Show Search Icon in Main Menu','redux-framework-demo'),
-                'content' => __('This option Enables\/Disables <strong>Search Icon<\/strong> on main menu. Choose <strong>YES<\/strong> to show Search Icon on main menu, Choose <strong>NO<\/strong> to remove it. Default value is <strong>YES<\/strong>','redux-framework-demo'),
-            )
-        ),
-        array (
-            'id' => 'menu_display_dropdown_indicator',
-            'type' => 'switch',
-            'title' =>  __('Dropdown Menu Indicator', 'redux-framework-demo'),
-            'subtitle'  => __('Enable arrow indicators next to parent level menu items', 'redux-framework-demo'),
-            'desc' => __('Check the box to enable arrow indicators next to parent level menu items', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => true,
-            'compiler' => array('main_nav_show_dropdown_indicator'),
-            'required' => array('header_show_navigation','equals','1'),
-            'hint' => array(
-                'title'   => __('Dropdown Menu Indicator','redux-framework-demo'),
-                'content' => __('Enable arrow indicators next to parent level menu items','redux-framework-demo'),
-            )
+        array(
+            'id'       => 'header_link_hover_color',
+            'type'     => 'color',
+            'title'    => __('Header Link Hover Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a link hover color for header (default: #333).', 'redux-framework-demo'),
+            'default'  => '#333',
+            'validate' => 'color',
+            'required' => array('header_customize_enable','equals','1'),
         ),
     )
+   
 );
+

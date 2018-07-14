@@ -25,6 +25,22 @@ $this->sections[] = array(
             )
         ),
         array (
+            'id' => 'main_nav_layout',
+            'type' => 'select',
+            'options' => array (
+                'horizontal' => 'Horizontal',
+                'vertical' => 'Vertical',
+            ),
+            'title' => __('Main Menu Layout','redux-framework-demo'),
+            'subtitle'  => __('Layout for the Main Menu.', 'redux-framework-demo'),
+            'desc' => __('Select the layout for the Main Menu.','redux-framework-demo'),
+            'default' => 'horizontal',
+            'hint' => array(
+                'title'   => __('Main Menu Layout','redux-framework-demo'),
+                'content' => __('Main Menu Layout','redux-framework-demo'),
+            )
+        ),
+        array (
             'id' => 'main_nav_show_home_icon',
             'type' => 'switch',
             'title' =>  __('Show Home Icon', 'redux-framework-demo'),
@@ -89,7 +105,7 @@ $this->sections[] = array(
             )
         ),
         array (
-            'id' => 'menu_display_dropdown_indicator',
+            'id' => 'main_nav_display_dropdown_indicator',
             'type' => 'switch',
             'title' =>  __('Dropdown Menu Indicator', 'redux-framework-demo'),
             'subtitle'  => __('Enable arrow indicators next to parent level menu items', 'redux-framework-demo'),
@@ -105,7 +121,7 @@ $this->sections[] = array(
             )
         ),
         array (
-            'id' => 'main_menu_customize_enable',
+            'id' => 'main_nav_customize_enable',
             'type' => 'switch',
             'title' =>  __('Customize Main Menu', 'redux-framework-demo'),
             'subtitle'  => __('Set Yes to Customize Main Menu', 'redux-framework-demo'),
@@ -120,63 +136,71 @@ $this->sections[] = array(
             )
         ),
         array(
-            'id'       => 'main_menu_background_color',
+            'id'       => 'main_nav_background_color',
             'type'     => 'color',
             'title'    => __('Main Menu Background Color', 'redux-framework-demo'), 
             'subtitle' => __('Pick a background color for Main Menu.', 'redux-framework-demo'),
             'default'  => '#d2d2d2',
             'validate' => 'color',
-            'required' => array('main_menu_customize_enable','equals','1'),
+            'required' => array('main_nav_customize_enable','equals','1'),
         ),        
         array(
-            'id'       => 'main_menu_link_color',
+            'id'       => 'main_nav_link_color',
             'type'     => 'color',
             'title'    => __('Main Menu Link Color', 'redux-framework-demo'), 
             'subtitle' => __('Pick a Link color for Main Menu.', 'redux-framework-demo'),
             'default'  => '#333',
             'validate' => 'color',
-            'required' => array('main_menu_customize_enable','equals','1'),
+            'required' => array('main_nav_customize_enable','equals','1'),
         ),
         array(
-            'id'       => 'main_menu_link_hover_color',
+            'id'       => 'main_nav_link_hover_color',
             'type'     => 'color',
             'title'    => __('Main Menu Link Hover Color', 'redux-framework-demo'), 
             'default'  => '#1e73be',
             'validate' => 'color',
-            'required' => array('main_menu_customize_enable','equals','1'),
+            'required' => array('main_nav_customize_enable','equals','1'),
         ),
         array(
-            'id'       => 'main_menu_link_active_color',
+            'id'       => 'main_nav_link_hover_background_color',
+            'type'     => 'color',
+            'title'    => __('Main Menu Link Hover Background Color', 'redux-framework-demo'), 
+            'default'  => '#1e73be',
+            'validate' => 'color',
+            'required' => array('main_nav_customize_enable','equals','1'),
+        ),
+        array(
+            'id'       => 'main_nav_link_active_color',
             'type'     => 'color',
             'title'    => __('Main Menu Link active Color', 'redux-framework-demo'), 
             'subtitle' => __('Pick a Link active color for Main Menu.', 'redux-framework-demo'),
             'default'  => '#1e73be',
             'validate' => 'color',
-            'required' => array('main_menu_customize_enable','equals','1'),
+            'required' => array('main_nav_customize_enable','equals','1'),
         ),
         array(
-            'id'       => 'main_menu_link_active_hover_color',
+            'id'       => 'main_nav_link_active_hover_color',
             'type'     => 'color',
             'title'    => __('Main Menu Link active Hover Color', 'redux-framework-demo'), 
             'default'  => '#ba0031',
             'validate' => 'color',
-            'required' => array('main_menu_customize_enable','equals','1'),
+            'required' => array('main_nav_customize_enable','equals','1'),
         ),
         array(
-            'id'       => 'main_menu_link_active_background_color',
+            'id'       => 'main_nav_link_active_background_color',
             'type'     => 'color',
             'title'    => __('Main Menu Link active background Color', 'redux-framework-demo'), 
             'default'  => '#fff',
             'validate' => 'color',
-            'required' => array('main_menu_customize_enable','equals','1'),
+            'required' => array('main_nav_customize_enable','equals','1'),
         ),
         array(
-            'id'       => 'main_menu_link_active_background_hover_color',
+            'id'       => 'main_nav_link_active_background_hover_color',
             'type'     => 'color',
             'title'    => __('Main Menu Link active Background Hover Color', 'redux-framework-demo'), 
             'default'  => '#333',
             'validate' => 'color',
-            'required' => array('main_menu_customize_enable','equals','1'),
+            'required' => array('main_nav_customize_enable','equals','1'),
         ),
         array(
             'id'       => 'second_level_menu_background_color',
@@ -185,7 +209,7 @@ $this->sections[] = array(
             'subtitle' => __('Second level Menu Background Color', 'redux-framework-demo'),
             'default'  => '#d2d2d2',
             'validate' => 'color',
-            'required' => array('main_menu_customize_enable','equals','1'),
+            'required' => array('main_nav_customize_enable','equals','1'),
         ), 
         array(
             'id'       => 'second_level_menu_link_color',
@@ -194,7 +218,7 @@ $this->sections[] = array(
             'subtitle' => __('Second level Menu Link Color', 'redux-framework-demo'),
             'default'  => '#333',
             'validate' => 'color',
-            'required' => array('main_menu_customize_enable','equals','1'),
+            'required' => array('main_nav_customize_enable','equals','1'),
         ), 
         array(
             'id'       => 'second_level_menu_link_hover_color',
@@ -203,7 +227,7 @@ $this->sections[] = array(
             'subtitle' => __('Second level Menu Link Hover Color', 'redux-framework-demo'),
             'default'  => '#333',
             'validate' => 'color',
-            'required' => array('main_menu_customize_enable','equals','1'),
+            'required' => array('main_nav_customize_enable','equals','1'),
         ),
         array(
             'id'       => 'second_level_menu_link_background_hover_color',
@@ -212,7 +236,7 @@ $this->sections[] = array(
             'subtitle' => __('Second level Menu Link Hover Background Color', 'redux-framework-demo'),
             'default'  => '#d2d2d2',
             'validate' => 'color',
-            'required' => array('main_menu_customize_enable','equals','1'),
+            'required' => array('main_nav_customize_enable','equals','1'),
         ),
     )
 );

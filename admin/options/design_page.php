@@ -58,6 +58,66 @@ $this->sections[] = array(
             )
         ),
         array (
+            'id' => 'page_top_area_customize_enable',
+            'type' => 'switch',
+            'title' =>  __('Customize Page Top Area', 'redux-framework-demo'),
+            'subtitle'  => __('Set Yes to Customize Page Top Area', 'redux-framework-demo'),
+            'desc' => __('Default value is <strong>NO</strong>.', 'redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default'   => 0,
+            'required' => array('page_top_area_enable','equals','1'),
+            'hint' => array(
+                'title'   => __('','redux-framework-demo'),
+                'content' => __('','redux-framework-demo'),
+            )
+        ),
+        array(
+            'id'       => 'page_top_area_background_color',
+            'type'     => 'color',
+            'title'    => __('Page Top Area Background Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a background color for Page Top Area.', 'redux-framework-demo'),
+            'default'  => '#333',
+            'validate' => 'color',
+            'required' => array('page_top_area_customize_enable','equals','1'),
+        ),
+        array(
+            'id'       => 'page_top_area_heading_color',
+            'type'     => 'color',
+            'title'    => __('Page Top Area Heading Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a Heading color for Page Top Area', 'redux-framework-demo'),
+            'default'  => '#fff',
+            'validate' => 'color',
+            'required' => array('page_top_area_customize_enable','equals','1'),
+        ),
+        array(
+            'id'       => 'page_top_area_text_color',
+            'type'     => 'color',
+            'title'    => __('Page Top Area Text Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a text color for Page Top Area', 'redux-framework-demo'),
+            'default'  => '#fff',
+            'validate' => 'color',
+            'required' => array('page_top_area_customize_enable','equals','1'),
+        ),
+        array(
+            'id'       => 'page_top_area_link_color',
+            'type'     => 'color',
+            'title'    => __('Page Top Area Link Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a link color for Page Top Area.', 'redux-framework-demo'),
+            'default'  => '#fff',
+            'validate' => 'color',
+            'required' => array('page_top_area_customize_enable','equals','1'),
+        ),
+        array(
+            'id'       => 'page_top_area_link_hover_color',
+            'type'     => 'color',
+            'title'    => __('Page Top Area Link Hover Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a link hover color for Page Top Area.', 'redux-framework-demo'),
+            'default'  => '#fff',
+            'validate' => 'color',
+            'required' => array('page_top_area_customize_enable','equals','1'),   
+        ),
+        array (
             'id' => 'page_bottom_area_enable',
             'type' => 'switch',
             'title' =>  __('Enable Page Bottom Area', 'redux-framework-demo'),
@@ -121,7 +181,6 @@ $this->sections[] = array(
                 'content' => __('Choose Yes to show right Sidebar','redux-framework-demo'),
             )
         ),
-
         array (
             'id' => 'sidebar_customize_enable',
             'type' => 'switch',

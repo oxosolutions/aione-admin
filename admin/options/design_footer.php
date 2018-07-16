@@ -74,6 +74,15 @@ $this->sections[] = array(
             'required' => array('footer_customize_enable','equals','1'),
         ),
         array(
+            'id'       => 'footer_heading_color',
+            'type'     => 'color',
+            'title'    => __('Footer Heading Color', 'redux-framework-demo'), 
+            'subtitle' => __('Pick a Heading color for Footer.', 'redux-framework-demo'),
+            'default'  => '#333',
+            'validate' => 'color',
+            'required' => array('footer_customize_enable','equals','1'),
+        ),
+        array(
             'id'       => 'footer_text_color',
             'type'     => 'color',
             'title'    => __('Footer Text Color', 'redux-framework-demo'), 

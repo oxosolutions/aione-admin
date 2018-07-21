@@ -7,7 +7,8 @@
  *********************************************************************************************/
 
 $this->sections[] = array(
-    'icon'      => 'dashicons dashicons-clipboard',
+    // 'icon'      => 'dashicons dashicons-clipboard',
+     'icon'      => plugins_url( 'assets/images/page-setting.svg', __FILE__ ),
     'title'     => __('Page Settings', 'redux-framework-demo'),
     'fields'    => array(
         array (

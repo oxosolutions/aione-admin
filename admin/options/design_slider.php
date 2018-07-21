@@ -8,7 +8,7 @@
 
 $this->sections[] = array(
     // 'icon'      => 'dashicons dashicons-slides',
-    'icon'      => plugins_url( 'assets/images/slider-new.svg', __FILE__ ),
+    'icon'      => plugins_url( 'assets/images/s-new.svg', __FILE__ ),
     'title'     => __('Slider Settings', 'redux-framework-demo'),
     'fields'    => array(
         array (

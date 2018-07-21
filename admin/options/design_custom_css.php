@@ -7,7 +7,7 @@
  *********************************************************************************************/
 
 $this->sections[] = array(
-    'icon'      => 'el-icon-css',
+    'icon'      => 'dashicons dashicons-media-code',
     'title'     => __('Custom CSS Code', 'redux-framework-demo'),
     //'subsection' => true,
     'fields'    => array(
@@ -17,6 +17,7 @@ $this->sections[] = array(
             'title'     => __('Custom CSS Code', 'redux-framework-demo'),
             'subtitle'  => __('Write your Custom CSS code here.', 'redux-framework-demo'),
             'mode'      => 'css',
+            'full_width' => true,
             //'validate'  => 'css',
             'theme'     => 'monokai',
             'options'   => array('minLines'=> 32),
@@ -36,6 +37,7 @@ $this->sections[] = array(
     'icon'      => 'el-icon-edit',
     'title'     => __('Custom JS Code', 'redux-framework-demo'),
     //'subsection' => true,
+
     'fields'    => array(
         array(
             'id'        => 'custom_js',
@@ -43,6 +45,7 @@ $this->sections[] = array(
             'title'     => __('Custom JS Code', 'redux-framework-demo'),
             'subtitle'  => __('Write your Custom Javascript code here.', 'redux-framework-demo'),
             'mode'      => 'javascript',
+            'full_width' => true,
             //'validate'  => 'js',
             'theme'     => 'monokai',
             'desc'      => __('','redux-framework-demo'),

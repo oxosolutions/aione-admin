@@ -6,7 +6,7 @@
  *********************************************************************************************/
 
 $this->sections[] = array(
-    'icon'      => 'el el-bold',
+    'icon'      => 'dashicons dashicons-grid-view',
     'title'     => __('Blog Settings', 'redux-framework-demo'),
     'fields'    => array(
         array (

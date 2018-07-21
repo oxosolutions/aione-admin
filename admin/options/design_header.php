@@ -5,7 +5,9 @@
  *
  *********************************************************************************************/
 $this->sections[] = array(
-    'icon'      => 'el-icon-cogs',
+    //'icon'      => 'assets/images/header-layout.svg',
+    'icon'      => plugins_url( 'assets/images/header.svg', __FILE__ ),
+    //'image'     => 'assets/images/header-layout.svg',
     'title'     => __('Header Settings', 'redux-framework-demo'),
     'fields'    => array(
         array (
@@ -244,7 +246,7 @@ $this->sections[] = array(
                 'content' => __('Select YES to enable a fixed header when scrolling, NO to disable','redux-framework-demo'),
             )
         ),
-        array (
+        /*array (
             'id' => 'header_sticky_tablet',
             'type' => 'switch',
             'title' =>  __('Enable Sticky Header on Tablets', 'redux-framework-demo'),
@@ -275,7 +277,7 @@ $this->sections[] = array(
                 'title'   => __('Enable Sticky Header on Mobiles','redux-framework-demo'),
                 'content' => __('Select YES to enable a fixed header when scrolling on Mobiles, NO to disable','redux-framework-demo'),
             )
-        ),
+        ),*/
 
         array (
             'id' => 'slidingbar_widgets',

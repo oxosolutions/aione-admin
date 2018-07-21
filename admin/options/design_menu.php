@@ -6,7 +6,7 @@
  *********************************************************************************************/
 
 $this->sections[] = array(
-    'icon'      => 'el el-th',
+    'icon'      => 'dashicons dashicons-menu',
     'title'     => __('Main Menu', 'redux-framework-demo'),
     'fields'    => array(
         array (
@@ -35,9 +35,46 @@ $this->sections[] = array(
             'subtitle'  => __('Layout for the Main Menu.', 'redux-framework-demo'),
             'desc' => __('Select the layout for the Main Menu.','redux-framework-demo'),
             'default' => 'horizontal',
+            'required' => array('header_show_navigation','equals','1'),
             'hint' => array(
                 'title'   => __('Main Menu Layout','redux-framework-demo'),
                 'content' => __('Main Menu Layout','redux-framework-demo'),
+            )
+        ),
+        array (
+            'id' => 'main_nav_position',
+            'type' => 'select',
+            'options' => array (
+                'inside' => 'Inside Header',
+                'outside' => 'Outside Header',
+            ),
+            'title' => __('Main Menu Postion','redux-framework-demo'),
+            'subtitle'  => __('Postion for the Main Menu.', 'redux-framework-demo'),
+            'desc' => __('Select the Postion for the Main Menu.','redux-framework-demo'),
+            'default' => 'outside',
+            'required' => array('header_show_navigation','equals','1'),
+            'hint' => array(
+                'title'   => __('Main Menu Postion','redux-framework-demo'),
+                'content' => __('Main Menu Postion','redux-framework-demo'),
+            )
+        ),
+        array (
+            'id' => 'main_nav_alignment',
+            'type' => 'button_set',
+            'multi'    => false,
+            'options' => array (
+                'left' => 'Left',
+                'center' => 'Center',
+                'right' => 'Right',
+            ),
+            'title' => __('Main Menu Alignment','redux-framework-demo'),
+            'subtitle'  => __('Alignment for the Main Menu.', 'redux-framework-demo'),
+            'desc' => __('Select the Alignment for the Main Menu.','redux-framework-demo'),
+            'default' => 'left',
+            'required' => array('header_show_navigation','equals','1'),
+            'hint' => array(
+                'title'   => __('Main Menu Alignment','redux-framework-demo'),
+                'content' => __('Main Menu Alignment','redux-framework-demo'),
             )
         ),
         array (

@@ -6,7 +6,7 @@
  *
  *********************************************************************************************/
 $this->sections[] = array(
-    'icon'      => 'el-icon-file',
+    'icon'      => 'dashicons dashicons-editor-insertmore',
     'title'     => __('Page Title Bar', 'redux-framework-demo'),
     'fields'    => array(
         array (

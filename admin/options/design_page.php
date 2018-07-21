@@ -7,7 +7,7 @@
  *********************************************************************************************/
 
 $this->sections[] = array(
-    'icon'      => 'el el-path',
+    'icon'      => 'dashicons dashicons-clipboard',
     'title'     => __('Page Settings', 'redux-framework-demo'),
     'fields'    => array(
         array (

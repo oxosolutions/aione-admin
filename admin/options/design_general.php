@@ -6,7 +6,7 @@
  *
  *********************************************************************************************/
 $this->sections[] = array(
-    'icon'      => 'el-icon-file',
+    'icon'      => 'dashicons dashicons-admin-generic',
     'title'     => __('General Settings', 'redux-framework-demo'),
     'fields'    => array(
         array (

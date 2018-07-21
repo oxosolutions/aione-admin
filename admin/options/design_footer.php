@@ -7,7 +7,8 @@
  *********************************************************************************************/
 
 $this->sections[] = array(
-    'icon'      => 'el-icon-fork',
+    // 'icon'      => 'dashicons dashicons-image-rotate-left',
+     'icon'      => plugins_url( 'assets/images/f-new.svg', __FILE__ ),
     'title'     => __('Footer', 'redux-framework-demo'),
     'fields'    => array(
         array (

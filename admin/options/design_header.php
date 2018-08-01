@@ -7,7 +7,6 @@
 $this->sections[] = array(
     //'icon'      => 'assets/images/header-layout.svg',
     'icon'      => plugins_url( 'assets/images/header.svg', __FILE__ ),
-    //'image'     => 'assets/images/header-layout.svg',
     'title'     => __('Header Settings', 'redux-framework-demo'),
     'fields'    => array(
         array (

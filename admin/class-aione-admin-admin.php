@@ -70,6 +70,8 @@ class Aione_Admin_Admin {
 		
 		add_shortcode( 'aione-options', array($this, 'aione_options_shortcode') );
 
+		add_action( 'admin_menu', array(&$this, 'removeReduxMenu'), 99 );
+
 	}
 
 	/**
@@ -117,6 +119,10 @@ class Aione_Admin_Admin {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'assets/js/aione-admin-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
+
+	public function removeReduxMenu() {
+        remove_submenu_page( 'tools.php', 'redux-about' );
+    }
 	
 	public function aione_options_shortcode( $atts ) {
 		extract( shortcode_atts(
@@ -126,17 +132,13 @@ class Aione_Admin_Admin {
 		);
 		
 		global $theme_options;
-		
-		echo "<pre>";
-		print_r($theme_options);
-		echo "</pre>";
-		
-		
-		
-		
 
-
+		$output = "";
+		$output .= "<pre>";
+		$output .= print_r($theme_options,true);
+		$output .= "</pre>";
 		
+		return $output;
 	} // End aione_options_shortcode()
 
 }

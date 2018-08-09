@@ -191,7 +191,7 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default'   => 1,
             'compiler' => array('header_show_tagline_class'),
-            'required' => array('header_enable','equals','1'),
+            'required' => array('header_show_site_title','equals','1'),
             'hint' => array(
                 'title'   => __('Show Tagline','redux-framework-demo'),
                 'content' => __('Tagine is a slogan for your businesrl. Choose <strong>YES<\/strong> to shs\/brand or any other sub-title you want to show on your website headeow Tagline on the header, Choose <strong>NO<\/strong> to remove it. Default value is <strong>YES<\/strong>.','redux-framework-demo'),
@@ -245,71 +245,7 @@ $this->sections[] = array(
                 'content' => __('Select YES to enable a fixed header when scrolling, NO to disable','redux-framework-demo'),
             )
         ),
-        /*array (
-            'id' => 'header_sticky_tablet',
-            'type' => 'switch',
-            'title' =>  __('Enable Sticky Header on Tablets', 'redux-framework-demo'),
-            'subtitle'  => __('To enable a fixed header when scrolling on Tablets', 'redux-framework-demo'),
-            'desc' => __('Select YES to enable a fixed header when scrolling on tablets, NO to disable', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 0,
-            'compiler' => array(''),
-            'required' => array('header_enable','equals','1'),
-            'hint' => array(
-                'title'   => __('Enable Sticky Header on Tablets','redux-framework-demo'),
-                'content' => __('Select YES to enable a fixed header when scrolling on Tablets, NO to disable','redux-framework-demo'),
-            )
-        ),
-        array (
-            'id' => 'header_sticky_mobile',
-            'type' => 'switch',
-            'title' =>  __('Enable Sticky Header on Mobiles', 'redux-framework-demo'),
-            'subtitle'  => __('To enable a fixed header when scrolling on Mobiles', 'redux-framework-demo'),
-            'desc' => __('Select YES to enable a fixed header when scrolling on mobiles, NO to disable', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 0,
-            'compiler' => array(''),
-            'required' => array('header_enable','equals','1'),
-            'hint' => array(
-                'title'   => __('Enable Sticky Header on Mobiles','redux-framework-demo'),
-                'content' => __('Select YES to enable a fixed header when scrolling on Mobiles, NO to disable','redux-framework-demo'),
-            )
-        ),*/
-
-        array (
-            'id' => 'slidingbar_widgets',
-            'type' => 'switch',
-            'title' =>  __('Show Sliding Bar', 'redux-framework-demo'),
-            'subtitle'  => __('Enable the top sliding bar.', 'redux-framework-demo'),
-            'desc' => __('', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 0,
-            'compiler' => array(),
-            'required' => array(),
-            'hint' => array(
-                'title'   => __('Show Sliding Bar','redux-framework-demo'),
-                'content' => __('Sliding Bar is the area hidden at the top of website which can be slides down on clicking on <strong>+(Plus)<\/strong> button on right corner. Choose <strong>YES<\/strong> to show sliding bar, Choose <strong>NO<\/strong> to hide it. Default value is <strong>YES<\/strong>.','redux-framework-demo'),
-            )
-        ),
-        array (
-            'id' => 'mobile_slidingbar_widgets',
-            'type' => 'switch',
-            'title' =>  __('Disable Sliding Bar On Mobile', 'redux-framework-demo'),
-            'subtitle'  => __('Disable Sliding Bar On Mobile', 'redux-framework-demo'),
-            'desc' => __('Disable the top Sliding Bar on mobile devices.', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 0,
-            'compiler' => array(''),
-            'required' => array('slidingbar_widgets','equals','1'),
-            'hint' => array(
-                'title'   => __('','redux-framework-demo'),
-                'content' => __('','redux-framework-demo'),
-            )
-        ),
+        
         array (
             'id' => 'header_customize_enable',
             'type' => 'switch',

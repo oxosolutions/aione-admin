@@ -21,7 +21,7 @@ $this->sections[] = array(
             'options' => array (
                 'list' => 'List',
                 'grid' => 'Grid',
-                'Timeline' => 'Timeline',
+                'timeline' => 'Timeline',
             ),
             'title' => __('Blog Archive Layout','redux-framework-demo'),
             'subtitle'  => __('Layout for the blog archive page.', 'redux-framework-demo'),
@@ -44,23 +44,20 @@ $this->sections[] = array(
             'subtitle'  => __('Grid Layout number of Columns.', 'redux-framework-demo'),
             'desc' => __('Select whether to display the grid layout in 2, 3 or 4 columns.','redux-framework-demo'),
             'default' => '3',
-            'required' => array('blog_archive_layout','equals','Grid'),
+            'required' => array('blog_archive_layout','equals','grid'),
             'hint' => array(
                 'title'   => __('Grid Layout # of Columns','redux-framework-demo'),
                 'content' => __('Grid Layout # of Columns','redux-framework-demo'),
             )
         ),
         array (
-            'id' => 'blog_archive_content_length',
-            'type' => 'select',
-            'options' => array (
-                'Excerpt' => 'Excerpt',
-                'Full Content' => 'Full Content',
-            ),
-            'title' => __('Excerpt or Full Blog Content','redux-framework-demo'),
-            'subtitle'  => __('Display Excerpt or Full Blog Content on Blog pages.', 'redux-framework-demo'),
-            'desc' => __('Choose from list','redux-framework-demo'),
-            'default' => 'Excerpt',
+            'id' => 'blog_archive_excerpt',
+            'type' => 'switch',
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default' => true,
+            'title' => __('Enable Excerpt','redux-framework-demo'),
+            'subtitle'  => __('Select YES to excerpt and No to display full content', 'redux-framework-demo'),
             'hint' => array(
                 'title'   => __('Excerpt or Full Blog Content','redux-framework-demo'),
                 'content' => __('Excerpt or Full Blog Content','redux-framework-demo'),
@@ -73,7 +70,7 @@ $this->sections[] = array(
             'subtitle'  => __('Number of words you want to show in the post excerpts.', 'redux-framework-demo'),
             'desc' => __('Enter the number of words.','redux-framework-demo'),
             'default' => '55',
-            'required' => array('blog_archive_content_length','equals','Excerpt'),
+            'required' => array('blog_archive_excerpt','equals','1'),
             'hint' => array(
                 'title'   => __('Excerpt Length','redux-framework-demo'),
                 'content' => __('Excerpt Length','redux-framework-demo'),
@@ -91,6 +88,35 @@ $this->sections[] = array(
             'hint' => array(
                 'title'   => __('Featured Image On Blog Archive Page','redux-framework-demo'),
                 'content' => __('Featured Image On Blog Archive Page','redux-framework-demo'),
+            )
+        ),
+        array (
+            'id' => 'blog_archive_title_enable',
+            'type' => 'switch',
+            'title' => __('Title on Archive Page','redux-framework-demo'),
+            'subtitle'  => __('Enables Title On Blog Archive Page.', 'redux-framework-demo'),
+            'desc' => __('YES to display title on blog archive page.','redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default' => true,
+            'hint' => array(
+                'title'   => __('Title On Blog Archive Page','redux-framework-demo'),
+                'content' => __('Title On Blog Archive Page','redux-framework-demo'),
+            )
+        ),
+        array (
+            'id' => 'blog_archive_title_link_enable',
+            'type' => 'switch',
+            'title' => __('Title Link on Archive Page','redux-framework-demo'),
+            'subtitle'  => __('Enables Title Link On Blog Archive Page.', 'redux-framework-demo'),
+            'desc' => __('YES to display title link on blog archive page.','redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default' => true,
+            'required' => array('blog_archive_title_enable','equals','1'),
+            'hint' => array(
+                'title'   => __('Title Link On Blog Archive Page','redux-framework-demo'),
+                'content' => __('Title Link On Blog Archive Page','redux-framework-demo'),
             )
         ),
         array (
@@ -139,7 +165,7 @@ $this->sections[] = array(
             'title' => __('Date Format On Blog Archive Page','redux-framework-demo'),
             'subtitle'  => __('Select Blog Archive Date Format - Month,Year.', 'redux-framework-demo'),
             'desc' => __('<a href=\'http://codex.wordpress.org/Formatting_Date_and_Time\'>Formatting Date and Time</a>','redux-framework-demo'),
-            'default' => 'm, Y',
+            'default' => 'F j, Y',
             'required' => array('blog_archive_date_meta_enable','equals','1'),
             'hint' => array(
                 'title'   => __('Blog Archive Page Date Format','redux-framework-demo'),
@@ -182,7 +208,7 @@ $this->sections[] = array(
             'desc' => __('YES to display Tags on blog archive page.','redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
-            'default' => true,
+            'default' => false,
             'hint' => array(
                 'title'   => __('Show Tags Meta On Blog Archive Page','redux-framework-demo'),
                 'content' => __('Show Tags Meta On Blog Archive Page','redux-framework-demo'),

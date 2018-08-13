@@ -1,96 +1,66 @@
-jQuery(function($) {
-    $(document).ready(function() {
+jQuery(function ($) {
+	$(document).ready(function () {
+		$('.redux-container').each(function () {
+			if (!$(this).hasClass('redux-no-sections')) {
+				$(this).find('.redux-main').prepend('<input class="redux_field_search" name="" type="text" placeholder="' + reduxsearch + '"/>');
+			}
+		});
 
-        $('.redux-container').each( function() {
-            if ( ! $(this).hasClass('redux-no-sections') ) {
-                $(this).find('.redux-main').prepend('<span class="dashicons dashicons-search"></span><input class="redux_field_search" name="" type="text" placeholder="' + reduxsearch + '"/>');
-            }
-        } );
+		$(".redux_field_search").keypress(function (evt) {
+			//Deterime where our character code is coming from within the event
+			var charCode = evt.charCode || evt.keyCode;
+			if (charCode == 13) { //Enter key's keycode
+				return false;
+			}
+		});
 
-        $( '.redux_field_search' ).keypress( function (evt) {
-            //Deterime where our character code is coming from within the event
-            var charCode = evt.charCode || evt.keyCode;
-            if (charCode  == 13) { //Enter key's keycode
-                return false;
-            }
-        } );
+		jQuery('.redux_field_search').typeWatch({
+			callback: function (searchString) {
+				searchString = searchString.toLowerCase();
+				var searchArray = searchString.split(' ');
+				var parent = $(this).parents('.redux-container:first');
+				var expanded_options = parent.find('.expand_options');
+				if (searchString != "") {
+					if (!expanded_options.hasClass('expanded')) {
+						expanded_options.click();
+						parent.find('.redux-main').addClass('redux-search');
+					}
+				} else {
+					if (expanded_options.hasClass('expanded')) {
+						expanded_options.click();
+						parent.find('.redux-main').removeClass('redux-search');
+					}
+					parent.find('.redux-section-field, .redux-info-field, .redux-notice-field, .redux-container-group, .redux-section-desc, .redux-group-tab h3').show();
+				}
+				parent.find('.redux-field-container').each(function () {
+					if (searchString != "") {
+						$(this).parents('tr:first').hide();
+					} else {
+						$(this).parents('tr:first').show();
+					}
+				});
+				parent.find('.form-table tr').filter(function () {
+					var item = $(this);
+					var isMatch = true,
+						text = $(this).find('.redux_field_th').text().toLowerCase();
+					if (!text || text == "") {
+						return false;
+					}
+					$.each(searchArray, function (i, searchStr) {
+						if (text.indexOf(searchStr) == -1) {
+							isMatch = false;
+						}
+					});
+					if (isMatch) {
+						$(this).show();
+					}
+					return isMatch;
+				}).show();
+			},
+			wait: 400,
+			highlight: false,
+			captureLength: 0
+		});
 
-        var
-        redux_container = $('.redux-container'),
-        redux_option_tab_extras = redux_container.find('.redux-section-field, .redux-info-field, .redux-notice-field, .redux-container-group, .redux-section-desc, .redux-group-tab h3, .redux-accordion-field'),
-        search_targets = redux_container.find( '.form-table tr, .redux-group-tab'),
-        redux_menu_items = $('.redux-group-menu .redux-group-tab-link-li');
-
-        jQuery('.redux_field_search').typeWatch({
-
-            callback:function( searchString ){
-                searchString = searchString.toLowerCase();
-                var searchArray = searchString.split(',');
-
-                if ( searchString !== '' && searchString !== null && typeof searchString !== 'undefined' && searchString.length > 2 ) {
-                    // Add a class to the redux container
-                    $('.redux-container').addClass('redux-search');
-                    // Show accordion content / options
-                    $('.redux-accordian-wrap').show();
-
-                    // Hide option fields and tabs
-                    redux_option_tab_extras.hide();
-                    search_targets.hide();
-
-                    // Show matching results
-                    search_targets.filter( function () {
-                        var
-                        item = $(this),
-                        matchFound = true,
-                        text = item.find('.redux_field_th').text().toLowerCase();
-
-                        if ( ! text || text == '' ) {
-                            return false;
-                        }
-
-                        $.each( searchArray, function ( i, searchStr ) {
-                            if ( text.indexOf( searchStr ) == -1 ) {
-                                matchFound = false;
-                            }
-                        });
-
-                        if ( matchFound ) {
-                            item.show();
-                        }
-
-                        return matchFound;
-
-                    } ).show();
-
-                    // Initialize option fields
-                    $.redux.initFields();
-
-                } else {
-                    // remove the search class from .redux-container if it exists
-                    $('.redux-container').removeClass('redux-search');
-
-                    // Get active options tab id
-                    var tab = $.cookie( 'redux_current_tab' );
-
-                    // Show the last tab that was active before the search
-                    $('.redux-group-tab').hide();
-                    $('.redux-accordian-wrap').hide();
-                    redux_option_tab_extras.show();
-                    $('.form-table tr').show();
-                    $('.form-table tr.hide').hide();
-                    $('.redux-notice-field.hide').hide();
-                    $( '#' + tab + '_section_group' ).show();
-
-                }
-
-            },
-
-            wait: 800,
-            highlight: false,
-            captureLength: 0,
-
-        } );
-
-    } );
-
-} );
+	});
+});

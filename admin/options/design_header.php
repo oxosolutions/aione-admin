@@ -9,6 +9,16 @@ $this->sections[] = array(
     'icon'      => plugins_url( 'assets/images/header.svg', __FILE__ ),
     'title'     => __('Header Settings', 'redux-framework-demo'),
     'fields'    => array(
+        //Accordion No Working We need to test it
+        /*
+        array(
+            'id'        => 'opt-accordion-begin-1',
+            'type'      => 'accordion',
+            'title'     => 'Topbar Settings',
+            'subtitle'  => 'Click to expand',
+            'position'  => 'start',
+        ),
+        */
         array (
             'id' => 'top_bar_settings',
             'icon' => false,
@@ -98,6 +108,13 @@ $this->sections[] = array(
             'validate' => 'color',
             'required' => array('top_bar_customize_enable','equals','1'),   
         ),
+        /*
+        array(
+            'id'        => 'opt-accordion-end-1',
+            'type'      => 'accordion',
+            'position'  => 'end'
+        ),
+        */
         array (
             'id' => 'header_settings',
             'icon' => false,

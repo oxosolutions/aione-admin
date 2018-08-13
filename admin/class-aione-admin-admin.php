@@ -3,7 +3,7 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       http://oxosolutions.com/
+ * @link       https://oxosolutions.com/
  * @since      1.0.0
  *
  * @package    Aione_Admin
@@ -68,9 +68,10 @@ class Aione_Admin_Admin {
 			require_once( dirname(__FILE__).'/framework.php' );
 		}
 		
-		add_shortcode( 'aione-options', array($this, 'aione_options_shortcode') );
-
-		add_action( 'admin_menu', array(&$this, 'removeReduxMenu'), 99 );
+		//aione-options Shortcode
+		//Shortcode to display all the options array 
+		add_shortcode( 'aione-options', array($this, 'aione_admin_aione_options_shortcode') );
+		add_action( 'admin_menu', array(&$this, 'aione_admin_remove_redux_about_menu'), 99 );
 
 	}
 
@@ -93,7 +94,7 @@ class Aione_Admin_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'assets/css/aione-admin-admin.css', array(), $this->version, 'all' );
+		//wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'assets/css/aione-admin-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -116,15 +117,15 @@ class Aione_Admin_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'assets/js/aione-admin-admin.js', array( 'jquery' ), $this->version, false );
+		//wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'assets/js/aione-admin-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 
-	public function removeReduxMenu() {
+	public function aione_admin_remove_redux_about_menu() {
         remove_submenu_page( 'tools.php', 'redux-about' );
     }
 	
-	public function aione_options_shortcode( $atts ) {
+	public function aione_admin_aione_options_shortcode( $atts ) {
 		extract( shortcode_atts(
 				array(
 					
@@ -139,6 +140,6 @@ class Aione_Admin_Admin {
 		$output .= "</pre>";
 		
 		return $output;
-	} // End aione_options_shortcode()
+	} // End aione_admin_aione_options_shortcode()
 
 }

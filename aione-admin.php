@@ -5,7 +5,7 @@
  * Plugin Name:       Aione Admin
  * Plugin URI:        https://oxosolutions.com/products/wordpress-plugins/aione-admin/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.6.8
+ * Version:           1.0.6.9
  * Author:            OXO Solutions®
  * Author URI:        https://oxosolutions.com/
  * License:           GPL-3.0+

@@ -473,6 +473,7 @@ if (!class_exists('aione_theme_options')) {
                 'customizer' => '1',
                 //'default_show' => '1',
                 //'customizer' => true,
+                // 'use_cdn' => false,
                 'default_show' => true,
                 'default_mark' => '<span class="default-mark"><i class="el el-icon-ok-sign"></i></span>',
                 'google_api_key' => 'NO_API_USED',

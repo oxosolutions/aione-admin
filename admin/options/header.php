@@ -19,95 +19,6 @@ $this->sections[] = array(
             'position'  => 'start',
         ),
         */
-        array (
-            'id' => 'top_bar_settings',
-            'icon' => false,
-            'type' => 'info',
-            'style' => 'default',
-            'raw' => '<h3 style=\'margin: 0;\'>Top Bar Settings</h3>',
-        ),
-        array (
-            'id' => 'show_top_bar',
-            'type' => 'switch',
-            'title' =>  __('Show Top Bar', 'redux-framework-demo'),
-            'subtitle'  => __('Enable the top bar on header.', 'redux-framework-demo'),
-            'desc' => __('Default value is <strong>YES</strong>.', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 1,
-            'compiler' => array('show_top_bar_class'),
-            'hint' => array(
-                'title'   => __('Show Top Bar','redux-framework-demo'),
-                'content' => __('Top Bar is an area in header(above logo) you can use to show menu,date,contact no.,email,login/register buttons etc. Choose <strong>YES</strong> to show top bar on the header, Choose <strong>NO</strong> to remove it. Default value is <strong>YES</strong>.','redux-framework-demo'),
-            )
-        ),
-        array (
-            'id' => 'top_bar_100_width',
-            'type' => 'switch',
-            'title' =>  __('100% Top bar width', 'redux-framework-demo'),
-            'subtitle'  => __('Set Yes to set the top bar to 100% of the browser width. Only works with wide layout mode.', 'redux-framework-demo'),
-            'desc' => __('Default value is <strong>YES</strong>.', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 0,
-            'compiler' => array('top_bar_100_width_class'),
-            'required' => array('show_top_bar','equals','1'),
-            'hint' => array(
-                'title'   => __('100% Top Bar Width','redux-framework-demo'),
-                'content' => __('Select Yes to set the topbar to 100% of the browser width. Uncheck to follow site width. Only works with wide layout mode.','redux-framework-demo'),
-            )
-        ),
-        array (
-            'id' => 'top_bar_customize_enable',
-            'type' => 'switch',
-            'title' =>  __('Customize Top Bar', 'redux-framework-demo'),
-            'subtitle'  => __('Set Yes to Customize Top Bar', 'redux-framework-demo'),
-            'desc' => __('Default value is <strong>NO</strong>.', 'redux-framework-demo'),
-            'on' => __('YES', 'redux-framework-demo'),
-            'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 0,
-            'required' => array('show_top_bar','equals','1'),
-            'hint' => array(
-                'title'   => __('','redux-framework-demo'),
-                'content' => __('','redux-framework-demo'),
-            )
-        ),
-        array(
-            'id'       => 'top_bar_background_color',
-            'type'     => 'color',
-            'title'    => __('Top Bar Background Color', 'redux-framework-demo'), 
-            'subtitle' => __('Pick a background color for topbar (default: #fff).', 'redux-framework-demo'),
-            'default'  => '#FFFFFF',
-            'validate' => 'color',
-            'required' => array('top_bar_customize_enable','equals','1'),
-        ),
-        array(
-            'id'       => 'top_bar_text_color',
-            'type'     => 'color',
-            'title'    => __('Top Bar Text Color', 'redux-framework-demo'), 
-            'subtitle' => __('Pick a text color for topbar (default: #333).', 'redux-framework-demo'),
-            'default'  => '#333',
-            'validate' => 'color',
-            'required' => array('top_bar_customize_enable','equals','1'),
-        ),
-        array(
-            'id'       => 'top_bar_link_color',
-            'type'     => 'color',
-            'title'    => __('Top Bar Link Color', 'redux-framework-demo'), 
-            'subtitle' => __('Pick a link color for topbar (default: #333).', 'redux-framework-demo'),
-            'default'  => '#333',
-            'validate' => 'color',
-            'required' => array('top_bar_customize_enable','equals','1'),
-        ),
-        array(
-            'id'       => 'top_bar_link_hover_color',
-            'type'     => 'color',
-            'title'    => __('Top Bar Link Hover Color', 'redux-framework-demo'), 
-            'subtitle' => __('Pick a link hover color for topbar (default: #333).', 'redux-framework-demo'),
-            'default'  => '#333',
-            'validate' => 'color',
-            'required' => array('top_bar_customize_enable','equals','1'),   
-        ),
         /*
         array(
             'id'        => 'opt-accordion-end-1',
@@ -174,7 +85,7 @@ $this->sections[] = array(
             'desc' => __('Select Yes to show logo', 'redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 1,
+            'default'   => 0,
             'compiler' => array('header_show_logo_class'),
             'required' => array('header_enable','equals','1'),
             'hint' => array(
@@ -190,7 +101,7 @@ $this->sections[] = array(
             'desc' => __('', 'redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 0,
+            'default'   => 1,
             'compiler' => array('header_show_site_title_class'),
             'required' => array('header_enable','equals','1'),
             'hint' => array(
@@ -198,7 +109,7 @@ $this->sections[] = array(
                 'content' => __('Site Title is the Name of your website representing your business\/brand or any other title you want to show on your website header. Choose <strong>YES<\/strong> to show Site Title on the header, Choose <strong>NO<\/strong> to remove it. Default value is <strong>YES<\/strong>','redux-framework-demo'),
             )
         ),
-        array (
+        array ( 
             'id' => 'header_show_tagline',
             'type' => 'switch',
             'title' =>  __('Show Tagline', 'redux-framework-demo'),
@@ -208,7 +119,7 @@ $this->sections[] = array(
             'off' => __('NO ', 'redux-framework-demo'),
             'default'   => 1,
             'compiler' => array('header_show_tagline_class'),
-            'required' => array('header_show_site_title','equals','1'),
+            'required' => array('header_enable','equals','1'),
             'hint' => array(
                 'title'   => __('Show Tagline','redux-framework-demo'),
                 'content' => __('Tagine is a slogan for your businesrl. Choose <strong>YES<\/strong> to shs\/brand or any other sub-title you want to show on your website headeow Tagline on the header, Choose <strong>NO<\/strong> to remove it. Default value is <strong>YES<\/strong>.','redux-framework-demo'),

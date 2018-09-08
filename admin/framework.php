@@ -289,15 +289,16 @@ if (!class_exists('aione_theme_options')) {
 
 
             // ACTUAL DECLARATION OF SECTIONS
-            require_once(dirname(__FILE__). '/options/design_general.php');
-            require_once(dirname(__FILE__). '/options/design_header.php');
-            require_once(dirname(__FILE__). '/options/design_menu.php');
-            require_once(dirname(__FILE__). '/options/design_slider.php');
-            require_once(dirname(__FILE__). '/options/design_page_title_bar.php');
-            require_once(dirname(__FILE__). '/options/design_page.php');
-            require_once(dirname(__FILE__). '/options/design_footer.php');
-            require_once(dirname(__FILE__). '/options/design_blog.php');
-            require_once(dirname(__FILE__). '/options/design_custom_css.php');
+            require_once(dirname(__FILE__). '/options/general.php');
+            require_once(dirname(__FILE__). '/options/topbar.php');
+            require_once(dirname(__FILE__). '/options/header.php');
+            require_once(dirname(__FILE__). '/options/menu.php');
+            require_once(dirname(__FILE__). '/options/slider.php');
+            require_once(dirname(__FILE__). '/options/page_title_bar.php');
+            require_once(dirname(__FILE__). '/options/page.php');
+            require_once(dirname(__FILE__). '/options/footer.php');
+            require_once(dirname(__FILE__). '/options/blog.php');
+            require_once(dirname(__FILE__). '/options/custom_css.php');
 
             //require_once(dirname(__FILE__). '/options/options.php');
 			

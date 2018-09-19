@@ -151,6 +151,22 @@ $this->sections[] = array(
             )
         ),
         array (
+            'id' => 'page_padding_enable',
+            'type' => 'switch',
+            'title' =>  __('Enable Page Padding', 'redux-framework-demo'),
+            'subtitle'  => __('Enable Page Padding', 'redux-framework-demo'),
+            'desc' => __('Yes to enable page Padding', 'redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default'   => 0,
+            'compiler' => array(''),
+            'required' => array(),
+            'hint' => array(
+                'title'   => __('Page Padding','redux-framework-demo'),
+                'content' => __('Choose Yes to show page Padding','redux-framework-demo'),
+            )
+        ),
+        array (
             'id' => 'page_bottom_area_customize_enable',
             'type' => 'switch',
             'title' =>  __('Customize Page Bottomttom Area', 'redux-framework-demo'),

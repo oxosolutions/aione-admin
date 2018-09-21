@@ -28,7 +28,6 @@ $this->sections[] = array(
                  'content' => __('Custom CSS Code','redux-framework-demo'),
             )
         ),
-		
     )
 );
 

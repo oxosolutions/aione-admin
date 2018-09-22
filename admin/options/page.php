@@ -363,6 +363,22 @@ $this->sections[] = array(
                 'content' => __('','redux-framework-demo'),
             )
         ),
+        array (
+            'id' => 'page_content_padding_enable',
+            'type' => 'switch',
+            'title' =>  __('Enable Page Content Padding', 'redux-framework-demo'),
+            'subtitle'  => __('Enable Page Content Padding', 'redux-framework-demo'),
+            'desc' => __('Yes to enable page content padding', 'redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default'   => 0,
+            'compiler' => array(''),
+            'required' => array('page_customize_enable','equals','1'),
+            'hint' => array(
+                'title'   => __('Page Content Padding','redux-framework-demo'),
+                'content' => __('Choose Yes to show page Content Padding','redux-framework-demo'),
+            )
+        ),
         array(
             'id'       => 'page_background_color',
             'type'     => 'color',

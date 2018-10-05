@@ -94,6 +94,23 @@ $this->sections[] = array(
             )
         ),
         array (
+            'id' => 'header_logo',
+            'type' => 'media',
+            'title' =>  __(' Logo', 'redux-framework-demo'),
+            'subtitle'  => __('Select Logo Image.', 'redux-framework-demo'),
+            'desc' => __('Select Logo Image.', 'redux-framework-demo'),
+            'default' => array (
+                'url' => AIONE_PLUGIN_URL. '/assets/images/logo.png',
+            ),
+            'url' => true,
+            'hint' => array(
+                'title'   => __('Logo','redux-framework-demo'),
+                'content' => 'Select an image file for your logo..........'
+            ),
+            'compiler' => array('header_logo_class'),
+            'required' => array('header_enable','equals','1'),
+        ),
+        array (
             'id' => 'header_show_site_title',
             'type' => 'switch',
             'title' =>  __('Show Site Title', 'redux-framework-demo'),

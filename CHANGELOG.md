@@ -11,3 +11,6 @@ RELEASE: 1.1.0.0 stable release
 ## 1.1.0.1 22-09-2018
 Added: Page Padding Option
 Added: Page Content Padding Option
+
+## 1.1.0.2 22-10-2018
+Added: favicon option

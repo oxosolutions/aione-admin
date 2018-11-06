@@ -20,7 +20,7 @@ $this->sections[] = array(
             'type' => 'switch',
             'title' =>  __('Show Topbar', 'redux-framework-demo'),
             'subtitle'  => __('Enable the topbar on header.', 'redux-framework-demo'),
-            'desc' => __('Select <strong>YES</strong> to display the topbar on header and <strong>NO</strong> to hide the topbar from header. Default value is <strong>YES</strong>.', 'redux-framework-demo'),
+            'desc' => __('Select <strong>YES</strong> to display the topbar on header and <strong>NO</strong> to hide the topbar from header. Default value is <strong>YES</strong>. You can add content to the topbar at <a href="'.admin_url( 'widgets.php').'" target="_blank">Widgets</a>.', 'redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
             'default'   => 1,

@@ -14,3 +14,6 @@ Added: Page Content Padding Option
 
 ## 1.1.0.2 22-10-2018
 Added: favicon option
+
+## 1.2.0.0 15-12-2018
+UPDATED: updated redux framework

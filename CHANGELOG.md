@@ -17,3 +17,6 @@ Added: favicon option
 
 ## 1.2.0.0 15-12-2018
 UPDATED: updated redux framework
+
+## 1.1.0.0 03-01-2019
+ADDED: Custom template for media

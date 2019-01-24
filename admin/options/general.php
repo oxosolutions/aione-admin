@@ -74,7 +74,7 @@ $this->sections[] = array(
             'word-spacing'    => false,
             'letter-spacing'  => false,
             'default' => array(
-                'font-family'     => "Open Sans",
+                'font-family'     => "Arial, Helvetica, sans-serif",
                 'font-weight'     => "400",
                 'color'           => '#595959',
             ),
@@ -102,7 +102,7 @@ $this->sections[] = array(
             'word-spacing'    => false,
             'letter-spacing'  => false,
             'default' => array(
-                'font-family'     => "Open Sans",
+                'font-family'     => "Arial, Helvetica, sans-serif",
                 'font-weight'     => "400",
                 'color'           => '#595959',
             ),

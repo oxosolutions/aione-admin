@@ -20,3 +20,6 @@ UPDATED: updated redux framework
 
 ## 1.1.0.0 03-01-2019
 ADDED: Custom template for media
+
+## 1.1.0.1 31-01-2019
+UPDATED: Typography Google Fonts Option

@@ -91,7 +91,7 @@ $this->sections[] = array(
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
             'default'   => 0,
-            'compiler' => array('header_show_logo_class'),
+            // 'compiler' => array('header_show_logo_class'),
             'required' => array('header_enable','equals','1'),
             'hint' => array(
                 'title'   => __('What is logo?','redux-framework-demo'),
@@ -112,8 +112,27 @@ $this->sections[] = array(
                 'title'   => __('What is logo image?','redux-framework-demo'),
                 'content' => 'A logo image is a pictorial mark (sometimes called a brand marks or logo symbol) is an icon—or graphic-based design which represents your brand that you want to show on your website header.'
             ),
-            'compiler' => array('header_logo_class'),
+            // 'compiler' => array('header_logo_class'),
             'required' => array('header_enable','equals','1'),
+        ),
+        array (
+            'id' => 'logo_height',
+            'type' => 'slider',
+            'min' => 20,
+            'max' => 200,
+            'step' => 1,
+            'title' => __('Logo Height','redux-framework-demo'),
+            'subtitle'  => __('Set height for the logo.', 'redux-framework-demo'),
+            'desc' => __('Set the height for the logo by entering the value in the textbox or by increasing or decreasing the slidebar. Default height value is <strong>50</strong>.','redux-framework-demo'),
+            'default' => 50,
+            'required' => array( 
+                array('header_enable','equals','1'), 
+                array('header_show_logo','equals','1') 
+            ),
+            'hint' => array(
+                'title'   => __('What is main menu height?','redux-framework-demo'),
+                'content' => __('Main menu height allows you to control the main menu height by increasing or decresing according to the requirement.','redux-framework-demo'),
+            )
         ),
         array (
             'id' => 'header_show_site_title',
@@ -145,6 +164,25 @@ $this->sections[] = array(
             'hint' => array(
                 'title'   => __('What is tagline?','redux-framework-demo'),
                 'content' => __('A tagline is one phrase (sometimes two) that provides clarity, entertainment, or emphasis to help highlight a brands mission, purpose, or culture.','redux-framework-demo'),
+            )
+        ),
+        array (
+            'id' => 'header_logo_alignment',
+            'type' => 'button_set',
+            'multi'    => false,
+            'options' => array (
+                'left' => 'Left',
+                'center' => 'Center',
+                'right' => 'Right',
+            ),
+            'title' => __('Logo alignment','redux-framework-demo'),
+            'subtitle'  => __('Set alignment for the logo and/or Site Title.', 'redux-framework-demo'),
+            'desc' => __('Select the alignment for the Logo as <strong>Left</strong>, <strong>Center<strong> or<strong> Right</strong>.','redux-framework-demo'),
+            'default' => 'right',
+            'required' => array('header_enable','equals','1'),
+            'hint' => array(
+                'title'   => __('What is logo alignment?','redux-framework-demo'),
+                'content' => __('Logo alignment allows you to control where the logo appears on header of your website.','redux-framework-demo'),
             )
         ),
         array (

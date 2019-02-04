@@ -23,3 +23,6 @@ ADDED: Custom template for media
 
 ## 1.1.0.1 31-01-2019
 UPDATED: Typography Google Fonts Option
+
+## 1.1.0.4 04-02-2019
+ADDED: Logo Alignment Option

@@ -479,8 +479,8 @@ if (!class_exists('aione_theme_options')) {
                 'default_mark' => '<span class="default-mark"><i class="el el-icon-ok-sign"></i></span>',
                 'google_api_key' => 'NO_API_USED',
                 'class' => 'design-settings',
-                'footer_credit'     => get_option( 'admin_footer_text', '<hr /><div style="width: 50%; float: left;">©2014 All Rights reserved. Darlic™ is a registered trademark of <a href="http://oxosolutions.com/" target="_blank">OXO Solutions</a>.</div>
-<div style="width: 50%; float: left; text-align: right;"><a href="http://darlic.com/terms-and-conditions/" target="_blank">Terms &amp; Conditions</a> • <a href="http://darlic.com/privacy-policy/" target="_blank">Privacy Policy</a> • Version '.$this->theme->get('Version').'</div>
+                'footer_credit'     => get_option( 'admin_footer_text', '<hr /><div style="width: 50%; float: left;">©2019 All Rights reserved. Darlic® is a registered trademark of <a href="https://oxosolutions.com/" target="_blank">OXO IT SOLUTIONS PRIVATE LIMITED</a>.</div>
+<div style="width: 50%; float: left; text-align: right;"><a href="https://darlic.com/terms-and-conditions/" target="_blank">Terms &amp; Conditions</a> • <a href="https://darlic.com/privacy-policy/" target="_blank">Privacy Policy</a> • Version '.$this->theme->get('Version').'</div>
 <style>
 .redux-container .redux_field_th .default-mark {
     display: inline-block;

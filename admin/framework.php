@@ -299,6 +299,7 @@ if (!class_exists('aione_theme_options')) {
             require_once(dirname(__FILE__). '/options/footer.php');
             require_once(dirname(__FILE__). '/options/blog.php');
             require_once(dirname(__FILE__). '/options/custom_css.php');
+            require_once(dirname(__FILE__). '/options/advanced.php');
 
             //require_once(dirname(__FILE__). '/options/options.php');
 			

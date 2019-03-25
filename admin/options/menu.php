@@ -150,6 +150,22 @@ $this->sections[] = array(
                 'content' => __('Main menu height allows you to control the main menu height by increasing or decresing according to the requirement.','redux-framework-demo'),
             )
         ),
+        array (
+            'id' => 'main_nav_padding',
+            'type' => 'slider',
+            'min' => 0,
+            'max' => 100,
+            'step' => 1,
+            'title' => __('Main Menu Padding','redux-framework-demo'),
+            'subtitle'  => __('Set height for the main menu.', 'redux-framework-demo'),
+            'desc' => __('Set the padding for the main menu by entering the value in the textbox or by increasing or decreasing the slidebar. Default height value is <strong>12</strong>.','redux-framework-demo'),
+            'default' => 12,
+            'required' => array('header_show_navigation','equals','1'),
+            'hint' => array(
+                'title'   => __('What is main menu padding?','redux-framework-demo'),
+                'content' => __('Main menu padding allows you to control the cpacing between the menu items by increasing or decresing according to the requirement.','redux-framework-demo'),
+            )
+        ),
         /*
         array (
             'id' => 'main_nav_show_home_icon',

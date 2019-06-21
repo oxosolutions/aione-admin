@@ -130,8 +130,8 @@ $this->sections[] = array(
                 array('header_show_logo','equals','1') 
             ),
             'hint' => array(
-                'title'   => __('What is main menu height?','redux-framework-demo'),
-                'content' => __('Main menu height allows you to control the main menu height by increasing or decresing according to the requirement.','redux-framework-demo'),
+                'title'   => __('What is logo height?','redux-framework-demo'),
+                'content' => __('Logo height allows you to control the logo height by increasing or decresing according to the requirement.','redux-framework-demo'),
             )
         ),
         array (

@@ -49,6 +49,21 @@ $this->sections[] = array(
             )
         ),
         array (
+            'id' => 'main_nav_show_description',
+            'type' => 'switch',
+            'title' =>  __('Main Menu Description', 'redux-framework-demo'),
+            'subtitle'  => __('Enable menu descriptions.', 'redux-framework-demo'),
+            'desc' => __('Select <strong>YES</strong> to enable the description to menu items and <strong>NO</strong> to show normal menu. Default value is <strong>NO</strong>.', 'redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default'   => false,
+            'required' => array('header_show_navigation','equals','1'),
+            'hint' => array(
+                'title'   => __('What is menu description?','redux-framework-demo'),
+                'content' => __('Menu description is the explanation of menu item','redux-framework-demo'),
+            )
+        ),
+        array (
             'id' => 'main_nav_layout',
             'type' => 'select',
             'options' => array (

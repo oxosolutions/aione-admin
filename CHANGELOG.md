@@ -26,3 +26,7 @@ UPDATED: Typography Google Fonts Option
 
 ## 1.1.0.4 04-02-2019
 ADDED: Logo Alignment Option
+
+## 1.2.0.0 21-06-2019
+ADDED: Menu description option
+UPDATED: Redux framework updated to latest version

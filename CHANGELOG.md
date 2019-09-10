@@ -30,3 +30,6 @@ ADDED: Logo Alignment Option
 ## 1.2.0.0 21-06-2019
 ADDED: Menu description option
 UPDATED: Redux framework updated to latest version
+
+## 1.2.0.1 10-09-2019
+UPDATED: Redux framework updated to latest version

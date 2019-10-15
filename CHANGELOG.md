@@ -33,3 +33,9 @@ UPDATED: Redux framework updated to latest version
 
 ## 1.2.0.1 10-09-2019
 UPDATED: Redux framework updated to latest version
+
+## 1.2.0.2 15-10-2019
+ADDED: Ratina Logo support
+
+## 1.2.0.3 15-10-2019
+ADDED: Website Preloader Support

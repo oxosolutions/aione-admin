@@ -116,6 +116,23 @@ $this->sections[] = array(
             'required' => array('header_enable','equals','1'),
         ),
         array (
+            'id' => 'header_logo_retina',
+            'type' => 'media',
+            'title' =>  __(' Logo Retina', 'redux-framework-demo'),
+            'subtitle'  => __('Select retina logo image.', 'redux-framework-demo'),
+            'desc' => __('Select retina logo image by click on <strong>Upload</strong> button and simply remove the logo by click on <strong>Remove</strong> button.', 'redux-framework-demo'),
+            'default' => array (
+                'url' => AIONE_PLUGIN_URL. '/assets/images/logo@2x.png',
+            ),
+            'url' => true,
+            'hint' => array(
+                'title'   => __('What is retina logo?','redux-framework-demo'),
+                'content' => 'Retina logo is logo for retina display.'
+            ),
+            // 'compiler' => array('header_logo_class'),
+            'required' => array('header_enable','equals','1'),
+        ),
+        array (
             'id' => 'logo_height',
             'type' => 'slider',
             'min' => 20,

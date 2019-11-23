@@ -121,6 +121,20 @@ $this->sections[] = array(
                 'content' => __('Header positioning allows you to control where the header appears on each page of your document.','redux-framework-demo'),
             )
         ),
+        array (
+            'id' => 'show_scroll_progress',
+            'type' => 'switch',
+            'title' =>  __('Show Scroll Progress', 'redux-framework-demo'),
+            'subtitle'  => __('Enable Scroll Progress', 'redux-framework-demo'),
+            'desc' => __('Select <strong>YES</strong> to enable scroll progress and <strong>NO</strong> disable scroll progress. Default value is <strong>YES</strong>.', 'redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default'   => 1,
+            'hint' => array(
+                'title'   => __('What is Scroll Progress?','redux-framework-demo'),
+                'content' => __('Scroll Progress shows a progress bar to show scroll value','redux-framework-demo'),
+            )
+        ),
 		
     )
 );

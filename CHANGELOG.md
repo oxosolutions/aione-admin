@@ -39,3 +39,6 @@ ADDED: Ratina Logo support
 
 ## 1.2.0.3 15-10-2019
 ADDED: Website Preloader Support
+
+## 1.2.0.4 04-11-2019
+ADDED: Scroll Progress Bar

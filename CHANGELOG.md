@@ -42,3 +42,6 @@ ADDED: Website Preloader Support
 
 ## 1.2.0.4 04-11-2019
 ADDED: Scroll Progress Bar
+
+## 1.2.0.5 04-12-2019
+ADDED: Google Analytics ID option

@@ -18,6 +18,14 @@ $this->sections[] = array(
             'raw' => '<h3 style=\'margin: 0;\'>Advanced Settings</h3>',
         ),
         array (
+            'id' => 'google_analytics_id',
+            'type' => 'text',
+            'title' => __('Google Analytics ID','redux-framework-demo'),
+            'subtitle'  => __('Enter Google Analytics ID', 'redux-framework-demo'),
+            'desc' => __('format UA-XXXXXXXXX-X','redux-framework-demo'),
+            'default' => '',
+        ),
+        array (
             'id' => 'advanced_use_cdn',
             'type' => 'switch',
             'title' =>  __('Use CDN', 'redux-framework-demo'),

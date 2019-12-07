@@ -130,6 +130,19 @@ $this->sections[] = array(
             )
         ),
         array (
+            'id' => 'preloader_text',
+            'type' => 'text',
+            'title' => __('Preloader Text','redux-framework-demo'),
+            'subtitle'  => __('Enter Preloader Text', 'redux-framework-demo'),
+            'desc' => __('Enter some text or some quote. Default preloader text is "Loading..."','redux-framework-demo'),
+            'default' => 'Loading...',
+            'required' => array('show_preloader','equals','1'),
+            'hint' => array(
+                'title'   => __('What is preloader text?','redux-framework-demo'),
+                'content' => __('Preloader text is string displayed under the preloader.','redux-framework-demo'),
+            )
+        ),
+        array (
             'id' => 'show_scroll_progress',
             'type' => 'switch',
             'title' =>  __('Show Scroll Progress', 'redux-framework-demo'),

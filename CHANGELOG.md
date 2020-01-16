@@ -45,3 +45,9 @@ ADDED: Scroll Progress Bar
 
 ## 1.2.0.5 04-12-2019
 ADDED: Google Analytics ID option
+
+## 1.2.0.6 16-01-2020
+ADDED: Intert Head and body code option
+ADDED: SEO Tab
+
+

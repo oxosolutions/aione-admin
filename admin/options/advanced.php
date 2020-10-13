@@ -106,7 +106,7 @@ $this->sections[] = array(
             'desc' => __('Select <strong>YES</strong> to enable website preloader and <strong>NO</strong> disable website preloader. Default value is <strong>YES</strong>.', 'redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 1,
+            'default'   => 0,
             'hint' => array(
                 'title'   => __('What is Website Preloader?','redux-framework-demo'),
                 'content' => __('Website Preloader shows a loading screen until entire website is loaded','redux-framework-demo'),
@@ -125,8 +125,8 @@ $this->sections[] = array(
                 'circular-dots' => 'Circular Dots',              
                 ),
             'hint' => array(
-                'title'   => __('What is header positioning?','redux-framework-demo'),
-                'content' => __('Header positioning allows you to control where the header appears on each page of your document.','redux-framework-demo'),
+                'title'   => __('What is preloader theme?','redux-framework-demo'),
+                'content' => __('Preloader themes are pre defined styling of the website preloader.','redux-framework-demo'),
             )
         ),
         array (
@@ -150,7 +150,7 @@ $this->sections[] = array(
             'desc' => __('Select <strong>YES</strong> to enable scroll progress and <strong>NO</strong> disable scroll progress. Default value is <strong>YES</strong>.', 'redux-framework-demo'),
             'on' => __('YES', 'redux-framework-demo'),
             'off' => __('NO ', 'redux-framework-demo'),
-            'default'   => 1,
+            'default'   => 0,
             'hint' => array(
                 'title'   => __('What is Scroll Progress?','redux-framework-demo'),
                 'content' => __('Scroll Progress shows a progress bar to show scroll value','redux-framework-demo'),

@@ -50,4 +50,5 @@ ADDED: Google Analytics ID option
 ADDED: Intert Head and body code option
 ADDED: SEO Tab
 
-
+## 1.2.0.7 06-11-2020
+UPDATED: Updated options default values

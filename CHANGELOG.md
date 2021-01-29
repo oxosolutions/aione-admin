@@ -52,3 +52,6 @@ ADDED: SEO Tab
 
 ## 1.2.0.7 06-11-2020
 UPDATED: Updated options default values
+
+## 1.3.0.0 29-01-2021
+UPDATED: PHP 7.4 compatibility 

@@ -37,21 +37,6 @@ $this->sections[] = array(
             'default'   => '1170px'
         ),
         array (
-            'id' => 'color_scheme',
-            'type' => 'select',
-            'title' =>  __('Color Scheme', 'redux-framework-demo'),
-            'subtitle'  => __('Select the color scheme.', 'redux-framework-demo'),
-            'desc' => __('Select the color scheme as <strong>Red</strong>, <strong>Green</strong> or <strong>Blue</strong> by selecting dropdown. Default value is <strong>Default</strong>.', 'redux-framework-demo'),
-            'options' => array(
-                'default' => __('Default','redux-framework-demo'),
-                'red' => __('Red','redux-framework-demo'),               
-                'green' => __('Green','redux-framework-demo'),               
-                'blue' => __('Blue','redux-framework-demo'),               
-                ),
-            'default' => 'default'
-        ),
-
-        array (
             'id' => 'font',
             'type' => 'typography',
             'title' =>  __('Body Font', 'redux-framework-demo'),
@@ -139,6 +124,86 @@ $this->sections[] = array(
                 'font-weight'     => "400",
                 'color'           => '#595959',
             ),
+        ),
+        array (
+            'id' => 'color_scheme',
+            'type' => 'palette-color',
+            'title' =>  __('Color Scheme', 'redux-framework-demo'),
+            'subtitle'  => __('Select the color scheme.', 'redux-framework-demo'),
+            'desc' => __('Select the color scheme as <strong>Red</strong>, <strong>Green</strong> or <strong>Blue</strong> by selecting dropdown. Default value is <strong>Default</strong>.', 'redux-framework-demo'),
+            'palettes' => array(
+                'grey' => array(
+                    '#595959',
+                    '#333333',
+                    '#212121'
+                ),
+                'red' => array(
+                    '#cc0000',
+                    '#cc0000',
+                    '#cc0000'
+                )
+            ),
+            'default' => 'default'
+        ),
+        array(
+            'id'       => 'color_primary',
+            'type'     => 'color',
+            'title'    => __('Theme Primary Color', 'redux-framework-demo'), 
+            'subtitle' => __('Select a primary color for theme', 'redux-framework-demo'),
+            'desc' => __('Default color is #333333. Mark tick for text color transparent. <a href="https://tools.darlic.com/colors.php"> Click here</a> for color codes.', 'redux-framework-demo'),
+            'default'  => '#333333',
+            'validate' => 'color',
+            'required' => array('color_scheme','!=','custom'),
+        ),
+        array(
+            'id'       => 'color_secondary',
+            'type'     => 'color',
+            'title'    => __('Theme Secondary Color', 'redux-framework-demo'), 
+            'subtitle' => __('Select a secondary color for theme.', 'redux-framework-demo'),
+            'desc' => __('Default color is #595959. Mark tick for link color transparent. <a href="https://tools.darlic.com/colors.php"> Click here</a> for color codes.', 'redux-framework-demo'),
+            'default'  => '#595959',
+            'validate' => 'color',
+            'required' => array('color_scheme','!=','custom'),
+        ),
+        array(
+            'id'       => 'color_highlight',
+            'type'     => 'color',
+            'title'    => __('Theme Highlight Color', 'redux-framework-demo'), 
+            'subtitle' => __('Select a highlight color for theme.', 'redux-framework-demo'),
+            'desc' => __('Default color is #212121. Mark tick for link hover color transparent. <a href="https://tools.darlic.com/colors.php"> Click here</a> for color codes.', 'redux-framework-demo'),
+            'default'  => '#212121',
+            'validate' => 'color',
+            'required' => array('color_scheme','!=','custom'),   
+        ),
+        array(
+            'id'       => 'bg_color_primary',
+            'type'     => 'color',
+            'title'    => __('Background Primary Color', 'redux-framework-demo'), 
+            'subtitle' => __('Select a primary color for backgrounds', 'redux-framework-demo'),
+            'desc' => __('Default color is #333333. Mark tick for text color transparent. <a href="https://tools.darlic.com/colors.php"> Click here</a> for color codes.', 'redux-framework-demo'),
+            'default'  => '#333333',
+            'validate' => 'color',
+            'required' => array('color_scheme','!=','custom'),
+        ),
+        array(
+            'id'       => 'bg_color_secondary',
+            'type'     => 'color',
+            'title'    => __('Background Secondary Color', 'redux-framework-demo'), 
+            'subtitle' => __('Select a secondary color for backgrounds.', 'redux-framework-demo'),
+            'desc' => __('Default color is #595959 . Mark tick for link color transparent. <a href="https://tools.darlic.com/colors.php"> Click here</a> for color codes.', 'redux-framework-demo'),
+            'default'  => '#595959',
+            'validate' => 'color',
+            'required' => array('color_scheme','!=','custom'),
+        ),
+        array(
+            'id'       => 'bg_color_highlight',
+            'type'     => 'color',
+            'title'    => __('Background Highlight Color', 'redux-framework-demo'), 
+            'subtitle' => __('Select a highlight color for backgrounds.', 'redux-framework-demo'),
+            'desc' => __('Default color is #212121. Mark tick for link hover color transparent. <a href="https://tools.darlic.com/colors.php"> Click here</a> for color codes.', 'redux-framework-demo'),
+            'default'  => '#212121',
+            'validate' => 'color',
+            'required' => array('color_scheme','!=','custom'),   
         ),
 
     )

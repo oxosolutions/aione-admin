@@ -55,3 +55,7 @@ UPDATED: Updated options default values
 
 ## 1.3.0.0 29-01-2021
 UPDATED: PHP 7.4 compatibility 
+
+## 1.4.0.0 27-05-2021
+ADDED: Theme color and background options 
+ADDED: Poweredby settings 

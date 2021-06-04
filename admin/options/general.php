@@ -127,21 +127,19 @@ $this->sections[] = array(
         ),
         array (
             'id' => 'color_scheme',
-            'type' => 'palette-color',
+            'type' => 'select_image',
             'title' =>  __('Color Scheme', 'redux-framework-demo'),
             'subtitle'  => __('Select the color scheme.', 'redux-framework-demo'),
             'desc' => __('Select the color scheme as <strong>Red</strong>, <strong>Green</strong> or <strong>Blue</strong> by selecting dropdown. Default value is <strong>Default</strong>.', 'redux-framework-demo'),
-            'palettes' => array(
-                'grey' => array(
-                    '#595959',
-                    '#333333',
-                    '#212121'
+            'options'  => array(
+                array (
+                     'alt'  => 'Default',
+                     'img'  => $url_to_img_1,
                 ),
-                'red' => array(
-                    '#cc0000',
-                    '#cc0000',
-                    '#cc0000'
-                )
+                array (
+                     'alt'  => 'Red',
+                     'img'  => $url_to_img_2,
+                ),
             ),
             'default' => 'default'
         ),

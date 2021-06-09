@@ -19,14 +19,14 @@ $this->sections[] = array(
             'id' => 'blog_archive_layout',
             'type' => 'select',
             'options' => array (
-                'list' => 'List',
                 'grid' => 'Grid',
+                'list' => 'List',
                 'timeline' => 'Timeline',
             ),
             'title' => __('Blog Archive Layout','redux-framework-demo'),
             'subtitle'  => __('Layout for the blog archive page.', 'redux-framework-demo'),
             'desc' => __('Select the layout from dropdown as <strong>List</strong>, <strong>Grid</strong> or <strong>Timeline</strong>. Default <strong>List</strong> is selected.','redux-framework-demo'),
-            'default' => 'list',
+            'default' => 'grid',
             'hint' => array(
                 'title'   => __('What is blog archive layout?','redux-framework-demo'),
                 'content' => __('Blog archive layout means how the blog content display in the browser i.e list wise,
@@ -37,18 +37,48 @@ $this->sections[] = array(
             'id' => 'blog_archive_grid_columns',
             'type' => 'select',
             'options' => array (
+                1 => '1',
                 2 => '2',
                 3 => '3',
                 4 => '4',
+                5 => '5',
             ),
             'title' => __('Grid Layout number of Columns','redux-framework-demo'),
             'subtitle'  => __('Grid Layout number of Columns.', 'redux-framework-demo'),
-            'desc' => __('Select whether to display the grid layout in 2, 3 or 4 columns.','redux-framework-demo'),
-            'default' => '3',
+            'desc' => __('Select whether to display the grid layout in 2, 3, 4 or 5 columns.','redux-framework-demo'),
+            'default' => '2',
             'required' => array('blog_archive_layout','equals','grid'),
             'hint' => array(
                 'title'   => __('Grid Layout # of Columns','redux-framework-demo'),
                 'content' => __('Grid Layout # of Columns','redux-framework-demo'),
+            )
+        ),
+        array (
+            'id' => 'blog_archive_left_sidebar_enable',
+            'type' => 'switch',
+            'title' => __('Left Sidebar','redux-framework-demo'),
+            'subtitle'  => __('Enable the Left Sidebar on blog archive page.', 'redux-framework-demo'),
+            'desc' => __('Select <strong>YES</strong> to display the left sidebar and <strong>NO</strong> to hide the left sidebar. Default value is <strong>YES</strong>.','redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default' => false,
+            'hint' => array(
+                'title'   => __('What is left sidebar?','redux-framework-demo'),
+                'content' => __('A left sidebar is a user interface element that displays a list of choices. It typically appears as a column to the left vertical of the main content.','redux-framework-demo'),
+            )
+        ),
+        array (
+            'id' => 'blog_archive_right_sidebar_enable',
+            'type' => 'switch',
+            'title' => __('Right Sidebar','redux-framework-demo'),
+            'subtitle'  => __('Enable the Right Sidebar on blog archive page.', 'redux-framework-demo'),
+            'desc' => __('Select <strong>YES</strong> to display the right sidebar and <strong>NO</strong> to hide the right sidebar. Default value is <strong>YES</strong>.','redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default' => true,
+            'hint' => array(
+                'title'   => __('What is right sidebar?','redux-framework-demo'),
+                'content' => __('A right sidebar is a user interface element that displays a list of choices. It typically appears as a column to the right vertical of the main content.','redux-framework-demo'),
             )
         ),
         array (
@@ -205,10 +235,52 @@ $this->sections[] = array(
             )
         ),
         array (
+            'id' => 'blog_archive_social_icons_enable',
+            'type' => 'switch',
+            'title' => __('Social Icons','redux-framework-demo'),
+            'subtitle'  => __('Enable social icons on blog single page.', 'redux-framework-demo'),
+            'desc' => __('Select <strong>YES</strong> to display the social icons on blog single page and <strong>NO</strong> to hide the social icons on blog archive page. Default value is <strong>NO</strong>.','redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default' => false,
+            'hint' => array(
+                'title'   => __('What are Social Icons?','redux-framework-demo'),
+                'content' => __(' The social icons displays small graphics linked to your social media accounts, in any widget area of your theme.','redux-framework-demo'),
+            )
+        ),
+        array (
             'id' => 'blog_single',
             'icon' => true,
             'type' => 'info',
             'raw' => '<h3 style=\'margin: 0;\'>You can tailor the experience of using "Blog Single Page" to suit your own  needs.</h3>',
+        ),
+        array (
+            'id' => 'blog_single_left_sidebar_enable',
+            'type' => 'switch',
+            'title' => __('Left Sidebar','redux-framework-demo'),
+            'subtitle'  => __('Enable the Left Sidebar on blog archive page.', 'redux-framework-demo'),
+            'desc' => __('Select <strong>YES</strong> to display the left sidebar and <strong>NO</strong> to hide the left sidebar. Default value is <strong>YES</strong>.','redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default' => false,
+            'hint' => array(
+                'title'   => __('What is left sidebar?','redux-framework-demo'),
+                'content' => __('A left sidebar is a user interface element that displays a list of choices. It typically appears as a column to the left vertical of the main content.','redux-framework-demo'),
+            )
+        ),
+        array (
+            'id' => 'blog_single_right_sidebar_enable',
+            'type' => 'switch',
+            'title' => __('Right Sidebar','redux-framework-demo'),
+            'subtitle'  => __('Enable the Right Sidebar on blog archive page.', 'redux-framework-demo'),
+            'desc' => __('Select <strong>YES</strong> to display the right sidebar and <strong>NO</strong> to hide the right sidebar. Default value is <strong>YES</strong>.','redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default' => true,
+            'hint' => array(
+                'title'   => __('What is right sidebar?','redux-framework-demo'),
+                'content' => __('A right sidebar is a user interface element that displays a list of choices. It typically appears as a column to the right vertical of the main content.','redux-framework-demo'),
+            )
         ),
         array (
             'id' => 'blog_single_featured_image_enable',

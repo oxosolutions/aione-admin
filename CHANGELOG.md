@@ -59,3 +59,6 @@ UPDATED: PHP 7.4 compatibility
 ## 1.4.0.0 27-05-2021
 ADDED: Theme color and background options 
 ADDED: Poweredby settings 
+
+## 1.5.0.0 06-07-2021
+FIXED: fixed issues 

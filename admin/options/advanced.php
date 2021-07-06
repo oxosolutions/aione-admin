@@ -26,6 +26,20 @@ $this->sections[] = array(
             'default' => '',
         ),
         array (
+            'id' => 'advanced_ajax_content',
+            'type' => 'switch',
+            'title' =>  __('Ajax Content', 'redux-framework-demo'),
+            'subtitle'  => __('Load Content with Ajax', 'redux-framework-demo'),
+            'desc' => __('Select <strong>YES</strong> to load content with Ajax and <strong>NO</strong> load content normally with page load. ', 'redux-framework-demo'),
+            'on' => __('YES', 'redux-framework-demo'),
+            'off' => __('NO ', 'redux-framework-demo'),
+            'default'   => 0,
+            'hint' => array(
+                'title'   => __('What is Ajax?','redux-framework-demo'),
+                'content' => __('AJAX is a technique for creating fast and dynamic web pages. AJAX allows web pages to be updated asynchronously by exchanging small amounts of data with the server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.','redux-framework-demo'),
+            )
+        ),
+        array (
             'id' => 'advanced_use_cdn',
             'type' => 'switch',
             'title' =>  __('Use CDN', 'redux-framework-demo'),

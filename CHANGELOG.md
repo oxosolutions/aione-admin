@@ -62,3 +62,6 @@ ADDED: Poweredby settings
 
 ## 1.5.0.0 06-07-2021
 FIXED: fixed issues 
+
+## 1.5.0.1 26-08-2021
+UPDATED: Content background color option 

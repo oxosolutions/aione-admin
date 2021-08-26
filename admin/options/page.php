@@ -417,7 +417,7 @@ $this->sections[] = array(
             'title'    => __('Content Background Color', 'redux-framework-demo'), 
             'subtitle' => __('Select a background color for content area of page.', 'redux-framework-demo'),
             'desc' => __('Default color is #FFFFFF (white). Mark tick for page background color transparent. <a href="https://tools.darlic.com/colors.php"> Click here</a> for color codes.', 'redux-framework-demo'),
-            'default'  => '#ffffff',
+            'default'  => 'transparent',
             'validate' => 'color',
             'required' => array('page_customize_enable','equals','1'),
         ),

@@ -66,8 +66,17 @@ FIXED: fixed issues
 ## 1.5.0.1 26-08-2021
 UPDATED: Content background color option 
 
-## 1.6.0.2 18-02-2022
+## 1.5.0.2 18-02-2022
 UPDATED: Support 5.9
 
-## 1.6.0.2 25-05-2022
+## 1.6.0.0 23-05-2022
 UPDATED: Support 6.0
+
+## 1.6.0.1 23-05-2022
+FIXED: Bugs Fixed
+
+## 1.6.0.2 24-05-2022
+FIXED: Bugs Fixed
+
+## 1.6.0.3 25-05-2022
+FIXED: Bugs Fixed

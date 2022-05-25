@@ -158,6 +158,8 @@ if (!class_exists('aione_theme_options')) {
               Used within different fields.
              * */
 
+              /*
+
             function getImageFiles($directory, $thumbnail = false){
                 // Background Images Reader
                 $thumbnail_directory = '';
@@ -181,6 +183,7 @@ if (!class_exists('aione_theme_options')) {
 					return $backgrounds;
 				}
             }
+            */
 			
 			/**
             Used to get list of all registered sidebars.
@@ -257,7 +260,8 @@ if (!class_exists('aione_theme_options')) {
                     <ul class="theme-info">
                         <li><?php printf(__('By %s', 'redux-framework-demo'), $this->theme->display('Author')); ?></li>
                         <li><?php printf(__('Version %s', 'redux-framework-demo'), $this->theme->display('Version')); ?></li>
-                        <li><?php echo '<strong>' . __('Tags', 'redux-framework-demo') . ':</strong> '; ?><?php printf($this->theme->display('Tags')); ?></li>
+                        
+                        
                     </ul>
                     <p class="theme-description"><?php echo $this->theme->display('Description'); ?></p>
             <?php

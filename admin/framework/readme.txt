@@ -1,418 +1,273 @@
-=== Gutenberg Template and Pattern Library & Redux Framework ===
-Contributors: dovyp, redux, kprovance
-Tags: patterns, templates, blocks, gutenberg, library, editor, page builder
-Requires at least: 4.0
-Requires PHP: 7.1
-Tested up to: 6.0
-Stable tag: 4.3.14
-License: GPL-3.0+
-License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+=== Redux Framework ===
+Contributors: dovyp, redux
+Donate link: http://paypal.me/reduxframework
+Tags: admin, admin interface, options, theme options, plugin options, options framework, settings, web fonts, google fonts
+Requires at least: 3.5.1
+Tested up to: 5.3.3
+Stable tag: 3.6.18
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Supercharge the Gutenberg editor with our library of Gutenberg block templates, layouts, and patterns!
+Redux is a simple, truly extensible and fully responsive options framework for WordPress themes and plugins. Ships with an integrated demo.
 
 == Description ==
-<strong>Redux - Quickly create full pages in WordPress’ Gutenberg</strong>
 
-Supercharge the Gutenberg editor with our ever-growing library of WordPress blocks templates, layouts, and patterns. Discover what's possible and implement any design on your website in virtually no time at all.
+Redux is a simple, truly extensible and fully responsive options framework for WordPress themes and plugins. Built on the WordPress Settings API, Redux supports a multitude of field types as well as: custom error handling, custom fields & validation types, and import/export functionality.
 
-Worried that our Gutenberg block templates, layouts, or patterns may not work with your theme? We've got you covered. Our template, layouts, and patterns will adapt to your theme's styles, so they look great with your site.
+But what does Redux actually DO?  We don't believe that theme and plugin developers should have to reinvent the wheel every time they start work on a project. Redux is designed to simplify the development cycle by providing a streamlined, extensible framework for developers to build on. Through a simple, well-documented config file, third-party developers can build out an options panel limited only by their own imagination in a fraction of the time it would take to build from the ground up!
 
-Don’t waste hours trying to recreate a Gutenberg block template, layout, or pattern you love. With a click of a button in its own website where you can start customizing it for your needs.
+= Online Demo =
+Don't take our word for it, check out our online demo and try Redux without installing a thing!
+[**http://demo.redux.io/**](http://demo.redux.io/)
 
-<h4>♥️ What the Plugin does?</h4>
-<ul>
-    <li><strong>Browse 1,000+</strong> block templates, layouts, and patterns from your Gutenberg Editor that you can add to your site immediately.</li>
-    <li><strong>Preview</strong> each block template, layout, or pattern on a demo site.</li>
-    <li><strong>Filter</strong> different content types and site types to find exactly what you're looking for.</li>
-    <li><strong>Gutenberg Block Patterns library</strong> support built in.</li>
-    <li>The most trusted option framework in the industry.</li>
-    <li>Developer friendly: clean code, inline documentation</li>
-</ul>
+= Use the Redux Builder to Get Started =
+Want to use Redux, but not sure what to do? Use our [builder](http://build.reduxframework.com/)! It will allow you to make a custom theme based on [_s](http://underscores.me), [TGM](http://tgmpluginactivation.com), and [Redux](http://reduxframework.com), and any Redux arguments you want to set.
 
-<h4>🚀 TYPICAL USE CASE OF THIS PLUGIN</h4>
-Whether you are building a simple site or a **big site** with **lots of pages**, you just want it to look amazing. With the Gutenberg block template, layout, and pattern library in Redux, you can begin making pages with various Gutenberg block patterns, templates or layouts.
+Don't want to make your own theme? Then output a custom admin folder that you can place in a theme or plugin. Oh and did we mention it's free? Try it today at:
+[**http://build.reduxframework.com/**](http://build.reduxframework.com/)
 
-You can browse through the categories, as well as collections of like-styled pages. When you find something you like, we make sure you have everything you need. Worried that our Gutenberg block templates, layouts, or patterns may not work with your theme? No problem! Our templates will adapt to your theme’s style to fit within your site’s design.
 
-Don’t waste hours trying to recreate a design you love. With a click of a button, you have it on your own site, and you can begin customizing your Gutenberg block template, layout or pattern for your needs.
+= Docs & Support =
+We have extremely extensive docs. Please visit [http://docs.reduxframework.com/](http://docs.reduxframework.com/) If that doesn’t solve your concern, you should search [the issue tracker on Github](https://github.com/reduxframework/redux-framework/issues). If you can't locate any topics that pertain to your particular issue, [post a new issue](https://github.com/reduxframework/redux-framework/issues/new) for it. Before you submit an issue, please read [our contributing requirements](https://github.com/redux-framework/redux-framework/blob/master/CONTRIBUTING.md). We build off of the dev version and push to WordPress.org when all is confirmed stable and ready for release.
 
-<h4>🎉 Supported Page Builders</h4>
-Redux supports only the <a href="https://wordpress.org/plugins/gutenberg/"><strong>Gutenberg / Block Editor of WordPress 5.0+</strong></a>.
 
-<h4>🎨 Supported Themes</h4>
-Though Redux will work with any theme that uses the Gutenberg block editor, we have done extra work to ensure complete compatibility with these themes.
+= Redux Framework Needs Your Support =
+It is hard to continue development and support for this free plugin without contributions from users like you. If you enjoy using Redux Framework, and find it useful, please consider [making a donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MMFMHWUPKHKPW). Your donation will help encourage and support the plugin's continued development and better user support.
 
-<ul>
-<li><a href="https://wordpress.org/themes/astra/"><strong>Astra Theme</strong></a> with <strong>Astra Pro</strong> Add-On Plugin – <strong>Custom Layouts</strong> (for Layouts, Headers, Footers, Hooks)</li>
-<li><a href="https://wordpress.org/themes/generatepress/"><strong>GeneratePress Theme</strong></a> with <strong>GP Premium</strong> Add-On Plugin – <strong>Elements</strong> (for Layouts, Headers, Hooks)</li>
-<li><a href="https://wordpress.org/themes/oceanwp/"><strong>OceanWP Theme</strong></a> with <a href="https://wordpress.org/plugins/ocean-extra/"><strong>Ocean Extra</strong></a> free Add-On Plugin – <strong>My Library</strong> (for Layouts, Hooks etc.)</li>
-<li><strong>Kava Pro Theme/ CrocoBlock Service</strong> with JetThemeCore Plugin – <strong>My Library</strong> (for Layouts, Pages, Headers, Footers, Single, Archive)</li>
-<li><strong>Genesis Framework</strong> with Genesis Child Themes — via <strong>Blox Lite</strong> and <strong>Blox</strong> (Pro) Plugins – <strong>Global Content Blocks</strong> (for Sections, Hooks)</li>
-<li><strong>Page Builder Framework</strong> with <strong>WPBF Premium</strong> Add-On Plugin – <strong>Custom Section</strong> (for Sections, Layouts, Hooks etc.)</li>
-<li><strong>Customify</strong> with <strong>Customify Pro</strong> Add-On Plugin – <strong>Hooks</strong> (for Layouts, Sections, Hooks etc.)</li>
-<li><strong>Suki</strong> with <strong>Suki Pro</strong> Add-On Plugin – <strong>Custom Blocks</strong> (for Layouts, Sections, Hooks etc.)</li>
-<li><strong>Neve</strong> with <strong>Neve Pro</strong> Add-On Plugin – <strong>Custom Layouts</strong> (for Layouts, Sections, Hooks etc.)</li>
-<li><strong>Woostify</strong> with <strong>Woostify Pro</strong> Add-On Plugin – <strong>Header Footer Builder</strong> (for Elementor theming areas – Headers/ Footers)</li>
-<li><strong>Avada Theme</strong> with Avada Fusion Builder – <strong>Library</strong> (for Templates, Pages, Layouts, Columns, Rows)</li>
-<li><strong>Divi Theme</strong> with Divi Builder – <strong>Library</strong> (for Templates etc.)</li>
-<li><strong>Extra Theme</strong> with Divi Builder – <strong>Library</strong> (for Templates etc.) – <strong>Category Templates</strong> (for Layouts, Templates etc.)</li>
-</ul>
+= Fields Types =
 
-<h4>👍 BE A CONTRIBUTOR</h4>
-If you want to translate, <a href="https://translate.wordpress.org/projects/wp-plugins/redux-framework">go to the Translation Portal at translate.wordpress.org</a>.
+* Background
+* Border
+* Button Set
+* Checkbox / Multi-Check
+* Color (WordPress Native)
+* Color Gradient
+* Color RGBA
+* Date
+* Dimensions (Height/Width)
+* Divide (Divider)
+* Editor (WordPress Native)
+* Gallery (WordPress Native)
+* Image Select (Patterns/Presets)
+* Import/Export
+* Info (Header/Notice)
+* Link Color
+* Media (WordPress Native)
+* Multi-Text
+* Password
+* Radio (w/ WordPress Data)
+* Raw (HTML/PHP/MarkDown)
+* Section (Indent and Group Fields)
+* Select (Select/Multi-Select w/ Select2 & WordPress Data)
+* Select Image
+* Slider (Drag a Handle)
+* Slides (Multiple Images, Titles, and Descriptions)
+* Sortable (Drag/Drop Checkbox/Input Fields)
+* Sorter (Drag/Drop Manager - Works great for content blocks)
+* Spacing (Margin/Padding/Absolute)
+* Spinner
+* Switch
+* Text
+* Textarea
+* Typography 
+ * The most advanced typography module complete with preview, Google fonts, and auto-css output!
 
-You can also contribute code via our <a href="https://github.com/reduxframework/redux-framework/">GitHub Repository</a>. Be sure to use our develop branch to submit pull requests.
+= Additional Features =
 
-<h4>📝 Documentation and Support</h4>
-<ul>
-<li>For more information about the Gutenberg block template, layout, and pattern library, check out <a href="https://extendify.com/" rel="nofollow ugc">Extendify</a>.</li>
-<li>For information about the Redux Options Framework, check out <a href="https://devs.redux.io/" rel="nofollow ugc">Redux Documentation</a>.</li>
-<li>If you have additional questions, reach out to us at support@redux.io</li>
-</ul>
+* Field Validation
+* MANY translations. (See below)
+* Full value escaping.
+* Required - Link visibility from parent fields. Set this to affect the visibility of the field on the parent's value. Fully nested with multiple required parents possible.
+* Output CSS Automatically - Redux generates CSS and the appropriate Google Fonts stylesheets for you on select fields. You need only specify the CSS selector to apply the CSS to (limited to certain fields).
+* Compiler integration! A custom hook runs when any fields with the argument `compile => true` are changed.
+* Oh, and did we mention a fully integrated Google Webfonts setup that will make you so happy you'll want to cry?
 
-<h4>⚡ Like the Redux Plugin?</h4>
-<ul>
-<li>Follow us on <a href="https://www.facebook.com/reduxframework" rel="nofollow ugc">Facebook 💬</a></li>
-<li><strong>Rate us 5 ⭐ stars</strong> on <a href="https://wordpress.org/support/plugin/redux-framework/reviews/?filter=5/#new-post">WordPress.org</a></li>
-<li>Follow us on Twitter 🐦: <a href="https://twitter.com/reduxframework" rel="nofollow ugc">@ReduxFramework</a></li>
-</ul>
+  
+= Translators & Non-English Speakers =
+We need your help to translate Redux into your language! Redux is part of the WP-Translations.org team. To help us translate Redux create a few account here: <a href="https://www.transifex.com/organization/wp-translations">https://www.transifex.com/organization/wp-translations</a>. Once you're in, you can head over to the <a href="https://www.transifex.com/projects/p/redux-framework/">Redux sub-project</a> and translate away. Thank you for your assistance.
 
-<h4>🔐 Privacy</h4>
-Redux does not interact with end users on your website. Our templates will continue to work even if Redux is uninstalled. If a product is using Redux the option panel will cease to function without Redux.
+= Get Involved =
+Redux is an ever-changing, living system. Want to stay up to date or contribute? Subscribe to one of our mailing lists or join us on [Facebook](https://facebook.com/reduxframework) or [Twitter](https://twitter.com/reduxframework) or [Github](https://github.com/ReduxFramework/ReduxFramework)!
 
-Redux utilizes [AppSero](https://appsero.com/) for account management as well as to enable our premium offerings. You can find their privacy policy here: [https://appsero.com/privacy-policy/](https://appsero.com/privacy-policy/). Activation of Redux is not necessary, but additional features such as Google Font Updates and increased access to the Gutenberg block template, layout, and pattern library will be limited.
-
-The Redux plugin uses a custom API to fetch our content library and our Gutenberg block templates, layouts, and patterns. To improve the service and stability we store logs which may or may not contain the following:
-<ul>
-<li>browser type</li>
-<li>referring site</li>
-<li>date and time of request</li>
-<li>category selection or search term</li>
-<li>anonymized IP address</li>
-</ul>
-
-API requests are only made when a user clicks on the Library button, launches the Redux Challenge, or opts into Google Font updates.
-
-For more details on our privacy policy: [https://redux.io/privacy](https://redux.io/privacy)
-For more details on our terms and conditions: [https://redux.io/terms](https://redux.io/terms)
+NOTE: Redux is not intended to be used on its own. It requires a config file provided by a third-party theme or plugin developer to actual do anything cool!
 
 == Installation ==
-1. Upload the entire plugin folder to the `/wp-content/plugins/` directory.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
 
-Once Installed and Activated you will be invited to Activate your Redux account. This is entirely voluntary and easily dismissed.
-
-If you want, you can use the [Gutenberg](https://wordpress.org/plugins/gutenberg/) plugin to get bleeding-edge experiments by the Gutenberg team.
-
-== Changelog ==
-
-= 4.3.14 =
-* New: `typography` field supports individual unit types for subfields that support them (font-size, line-height, etc.)  See: [https://devs.redux.io/core-fields/typography.html](https://devs.redux.io/core-fields/typography.html)
-* Fixed: Redux installed via TGMPA failing with "This plugin does not have a valid header."
-* Updated: Extendify Library.
-* Release date: May 19, 2022
-
-= 4.3.13 =
-* Fixed: Work for `required` functionality within the `repeater` field.
-* Fixed: Filter out bad default values for `color_rgba` field.
-* Fixed: jQuery deprecation notice.
-* Fixed: Type error in `import_export` field.  Additional `repeater` JS fix.
-* Fixed: `required` functionality within the `repeater` field.
-* Modified: Additional sanitizing on color hex values.
-* Modified: Customizer code to eliminate `init()` error.
-* Updated: Extendify Library.
-* Release date: May 05, 2022
-
-= 4.3.12 =
-Updated: Vendor libraries.
-Updated: Extendify Library.
-Fixed: jQuery deprecation notices.
-Fixed: Filesystem class error.
-Fixed: Customizer not saving data for sections not shown in the customizer.
-Fixed: Fix deprecation errors in customizer.
-Fixed: Fix core deprecation notices in metaboxes.
-Release date: March 08, 2022
-
-= 4.3.11 =
-Added: Advanced Customizer!
-Added: Font Awesome 6 Library for future extensions.
-Modified: Enforcing deprecation notices for deprecated functions. Developers: Please update your code as necessary.
-Modified: Connection banner to meet wp.org library standards.
-Updated: Extendify Library.
-Release date: February 23, 2022
-
-= 4.3.10 =
-Added: Repeater field for beta testing.
-Modified: Background field will now show background styling options even if `background-image` is not set.
-Modified: Connection banner now promotes Extendify plugin with download/activate option.
-Updated: Extendify Library.
-Release date: February 09, 2022
-
-= 4.3.9 =
-Fixed: Extendify Library JavaScript error.
-Release date: January 26, 2022
-
-= 4.3.8 =
-Fixed: Spacing field defaults to `px` if no default is set.
-Fixed: Remove plugin.php hack in Appsero SDK.
-Updated: Default Google Fonts list brought up to current release
-Updated: Extendify Library.
-Release date: January 25, 2022
-
-= 4.3.7 =
-Fixed: Incorrect global variable assignment. Thanks, @webbudesign.
-Release date: January 11, 2022
-
-= 4.3.6 =
-Modified: Update to the Extendify Library.
-Modified: Moved Extendify and Redux templates libraries back to root folder.
-Modified: Removed "Gutenberg is currently disabled" notice when the Classic Editor plugin is active.
-Fixed: `date` shortcode without attributes producing error.
-Fixed: Various jQuery deprecation fixes.
-Release date: January 11, 2022
-
-= 4.3.5 =
-Added: Add former premium feature: Option panel Search Bar. See Sample demo or the [docs site](https://devs.redux.io/core-extensions).
-Added: Add former premium feature: Shortcodes.  See Sample demo or the [docs site](https://devs.redux.io/core-extensions).
-Fixed: #3852 - Editor in metaboxes not saving HTML.  WIll now save the same HTML posts/pages allows.
-Fixed: Front end formatting issue with the Extendify template library.
-Release date: December 01, 2021
-
-= 4.3.4 =
-Fixed: CSS and JS not loading when embedding Redux due to malformed path.
-Modified: Update to the Extendify template library.
-Release date: November, 24 2021
-
-= 4.3.3 =
-Modified: Move template libraries to redux-core directory.
-Modified: Update to the Extendify template library.
-Release date: November 16, 2021
-
-= 4.3.2 =
-Added: Metaboxes!
-Fixed: Incorrect return type in Options Constructor.
-Modified: Prefixed Browser class to avoid conflict with older versions in other projects.
-Release date: November 11, 2021
-
-= 4.3.1 =
-Fixed: `wp_mail has been declared by another process or plugin` message.
-Fixed: Malformed README wouldn't allow clicking of some support links.
-Release date: September 22, 2021
-
-= 4.3.0 =
-Added: Gutenberg Template Library updated to the new Extendify library. See more information here about this upgrade and how to access the legacy library: [https://redux.io/gutenberg-template-library-upgrade](https://redux.io/gutenberg-template-library-upgrade).
-Added: Option to enable/disable Template libraries.  Found under Settings > Redux > Templates
-Added: Redux debug data moved to WordPress Site Health Info screen.
-Removed: Redux Framework Health Screen.
-Modified: Tools > Redux Framework screen moved to Settings > Redux
-Modified: Redux Templates disabled by default.
-Release date: September 21, 2021
-
-= 4.2.14 =
-Fixed: Parse error in Import/Export module due to old versions of PHP.
-Release date: August 11, 2021
-
-= 4.2.13 =
-Fixed: #3822 - Default value function returns string or array to prevent type error.
-Modified: #3820 - Better support for Redux embedded in themes.
-Modified: `install_plugins` security level now required to install Template blocks that require additional plugins.  This was done for security reasons.
-Added: New global arg `load_on_cron`.  Set to true if you require Redux to run within a cron initiated function.
-Removed: URL based  Import/Export option due to security concerns.  Manual Import/Export features remain.
-Removed: Support URL feature due to security issues.  Please use WordPress Site Health 'copy to clipboard' compiler to submit system data when reporting issues.
-Release date: August 11, 2021
-
-= 4.2.11 =
-Fixed: Removed type declarations on core return values to support improperly written third-party extensions.
-Fixed: Added shim to prevent errors on functions calls outdated extensions are still using.
-Fixed: Removed type declarations on field code to support outdated versions of PHP (PHP 7.4 is the minimum recommendation from WordPress...please update if you are able). [https://wordpress.org/about/requirements](https://wordpress.org/about/requirements).
-Fixed: Support URL button kicking back a JavaScript error.
-Release date: July 29, 2021
-
-= 4.2.10 =
-Fixed: Output on the frontend triggering error.
-Fixed: Updated shims to support older extensions not authored by Redux.io
-Release date: July 28, 2021
-
-= 4.2.9 =
-Fixed: WordPress data class now works properly.
-Release date: July 28, 2021
-
-= 4.2.8 =
-Redux instances returning null.  Saved options now show on the front end.
-Release date: July 28, 2021
-
-= 4.2.7 =
-Fixed: Options reverting or not saving.
-Release date: July 28, 2021
-
-= 4.2.6 =
-Fixed: Fatal error if passing null as an option section.
-Fixed: Error in connection banner routine.
-Release date: July 28, 2021
-
-= 4.2.5 =
-Fixed: Type mismatch in Redux Helpers.
-Release date: July 28, 2021
-
-= 4.2.4 =
-Fixed: Taxonomy WordPress data not handled properly in fields that support WordPress data.
-Release date: July 28, 2021
-
-= 4.2.3 =
-Fixed: Return type error in Redux templates.
-Release date: July 28, 2021
-
-= 4.2.2 =
-Fixed: WordPress data options not handling WP_Error properly.
-Release date: July 28, 2021
-
-= 4.2.1 =
-Fixed: Type mismatch regarding select boxes and callbacks.
-Release date: July 27, 2021
-
-= 4.2.0 =
-New: Typography features:  Top and bottom margins, text-shadow.
-New: Media Image Filters (greyscale, sepia, opacity, contrast, invert, blur, saturate, brightness, hue-rotate).
-New: Filters (type, reach, angle) for Gradient color field.
-New: Box Shadow field.
-New: Flyout Submenus: `flyout_submenus` global arg.
-New: Alpha color option for color field: `color_alpha` field arg for fields that support color pickers.
-Updated: select2 library to 4.1.0.
-Updated: readme.txt to conform to wp.org standards.
-Fixed: Remove PHP 7.2 syntax to keep older versions of PHP 7 happy.
-Fixed: Redux templates not showing on 'page attributes' for some.
-Fixed: Additional PHP 8.0 compatibility.
-Fixed: Widget screen would not load due to conflict with template library.
-Added:  WordPress 5.8 compatibility.
-Improved: Better Gutenberg block editor detection.
-Modified: Redux Pro no longer required for automatic Google font updates.
-Modified: Rename Parsedown class for raw field to avoid conflicts with other plugins.
-Removed: `async_typography` global arg.  Google no longer supports it.  Use `font_display` with one of the following `auto|block|swap|fallback|optional`.  See: [https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display)
-Release date: July 27, 2021
-
-= 4.1.29 =
-Fixed: All PHP 7.4 specific syntax backed out.  It caused older versions of PHP to report fatal errors.
-Fixed: Index error in the image_select field.
-Release date: June 29, 2021
-
-= 4.1.28 =
-Fixed: Redux templates loading on post types with no block editor.
-Fixed: Redux theme checks no longer prevent theme check plugin from functioning.
-Fixed: Heatbeat check no longer eats the function if disregarded.
-Fixed: Background field image now hides preview image upon removal.
-Fixed: RAW field in sample config now works.
-Fixed: Helper function is_field_in_use now returns false, instead of null.
-Fixed: Palette field rendering improperly.
-Fixed: Google font update fail.
-Modified: buttonset() jQuery widget deprecated.  Replaced with controlgroup().
-Modified: Additional JavaScript updates to fix jQuery deprecation notices.
-Release date: June 29, 2021
-
-= 4.1.27 =
-Fixed: Image select not selecting default value.
-Modified: Link color field overridden by theme.  Added 'important' arg to the output array to fix.  See sample config.
-Fixed: Same config not setting footer background in Twenty-twenty theme due to incorrect class.
-Fixed: Radio field not displaying text after save/refresh when displaying WordPress data.
-Modified: Donation text removed.
-Fixed: Link color CSS compiling incorrectly due to late escaping.
-
-= 4.1.26 =
-Added: Menu accent introduced in WordPress 5.7.
-Updated: ACE Editor 1.4.12.
-Updated select2 to support cssContainer.
-Fixed: Multiple submenus in metaboxes; the last submenu it cut off.
-Fixed: Fatal error: Can't use function return value in write context.
-Fixed: PHP 8.0 deprecation warnings.
-Fixed: Malformed HTML causing Redux pro alpha color-picker to not render.
-Fixed: Improved class checks for Redux Pro.
-Fixed: jQuery 3.x deprecation notices.
-Fixed: Malformed SCSS.
-Release date: March 17, 2021
-
-= 4.1.25 =
-Fixed: Erroneous icon on button_set field after WP 5.6 update.
-Fixed: Erroneous icon on palette field after WP 5.6 update.
-Fixed: PHP error in init_delay function during heartbeat API.
-Fixed: Options object field not rendering.
-Release date: Jan 21, 2021
-
-= 4.1.24 =
-Fixed: Select2 callback fix for select fields.
-Added: Shim: empty field_*.php files to fix developers including files improperly.
-Fixed: Changed use of ctype_xdigit to account for hosts where it's disabled.
-Added: Shim for people using terms data key, but using taxonomies instead of taxonomy.
-Fixed: Static call mismatch in redux colors.
-Fixed: CSRF security issue with a flipped if conditional. Thanks, @ErwanLR.
-Fixed: WordPress 4.6 API warnings.
-Fixed: WordPress 4.6 customizer issue where fields not displaying properly.
-Fixed: Massive speed improvement to the library.
-Fixed: Pro template count error if previously activated and Redux Pro not enabled.
-Release date: Dec 12, 2020
-
-= 4.1.23 =
-Fixed: Massive speed improvement to the library.
-Fixed: Pro template count error if previously activated and Redux Pro not enabled.
-Release date: Oct 24, 2020
-
-= 4.1.22 =
-Fixed: Menu locations WordPress data object not providing name.
-Added: Undefined if menu location is not assigned to a menu.
-Fixed: Another import/export edge case.
-Fixed: Fix setField API value.
-Fixed: Older extension compatibility.
-Fixed: Text field error with data/options args not displaying properly.
-Fixed: Import/Export now properly respects order of objects. Now using PHP over JS json_encode.
-Release date: Oct 23, 2020
-
-= 4.1.21 =
-Fixed: Fixed connection banner to hide even if JS is broken by jQuery migrate issue (WP 5.5).
-Fixed: Resolved all remaining legacy extension compatibility issues.
-Fixed: Custom callback with select field.
-Fixed: Typography bug when style was hidden.
-Fixed: Issue with text labels.
-Fixed: Google fonts HTML validation issues.
-Added: Feedback modal.
-Fixed: Import logic flaw.
-Fixed: Security bug. Thanks, @lenonleite of www.lenonleite.com.br.
-Release date: Oct 08, 2020
-
-= 4.1.20 =
-Added: Properly adjust the blocked editor page width based on template selected.
-Added: Broke out third-party premium plugins for filtering to help with understanding of what comes with Redux Pro.
-Added: Update block editor width when selecting a Redux template.
-Fixed: Some styling issues with preview modal.
-Fixed: Issue where plugin titles were not alphabetical.
-Fixed: Disabled third party premium dependencies.
-Fixed: Issue where crash would occur when Redux could not write out a file.
-Fixed: CSS selectors with HTML entities, like >, were not getting decoded for the passed compiler values.
-Fixed: Redux Pro activation issue.
-Fixed: Invalid logic causing some extensions not to run.
-Release date: Sep 18, 2020
-
-** For a full changelog, see https://github.com/reduxframework/redux-framework/blob/master/CHANGELOG.md **
+= For Complete Documentation and Examples =
+Visit: [http://docs.reduxframework.com/](http://docs.reduxframework.com/)
 
 == Frequently Asked Questions ==
 
-= Who should use the Gutenberg Block Template, Layout, and Pattern Library? =
+= Why doesn't this plugin do anything? =
 
-The Redux Block Library for Gutenberg is a complete package of unique and creative block templates, layouts, and patterns that will help you build beautiful pages and posts on a website. It is of value for everyone and for all who love Gutenberg.
+Redux is an options framework... in other words, it's not designed to do anything on its own! You can however activate a demo mode to see how it works. 
 
-= What are the requirements to use the Gutenberg Template, Layout, and Pattern Library? =
+= How can I learn more about Redux? =
 
-You only need to have the latest version of WordPress on your website, to begin with. Redux is for Gutenberg is basically an addon for the default WordPress block editor. Therefore, the latest WordPress installation along with a theme should be enough, to begin with.
+Visit our website at [http://reduxframework.com/](http://reduxframework.com/)
 
-= What themes do Redux Library for Gutenberg work with? =
+= You don't have much content in this FAQ section =
+That's because the real FAQ section is on our site! Please visit [http://docs.reduxframework.com/faq/](http://docs.reduxframework.com/faq/)
 
-Redux is built to work wonderfully with all themes.
+== Screenshots ==
 
-= Can I use Redux for Gutenberg even while having another Page Builder? =
+1. This is the demo mode of Redux Framework. Activate it and you will find a fully-functional admin panel that you can play with. On the Plugins page, beneath the description and an activated Redux Framework, you will find a Demo Mode link. Click that link to activate or deactivate the sample-config file Redux ships with.  Don't take our word for it, check out our online demo and try Redux without installing a thing! [**http://demo.reduxframework.com/wp-admin/**](http://demo.reduxframework.com/wp-admin/)
 
-The basic need or requirement for the Gutenberg Template, Layout, and Pattern Library is the latest WordPress version. Should you need help, you can <a href="https://redux.io/contact/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme" target="_blank" rel="">get in touch with us.</a>
+== Changelog ==
+= 3.6.16 =
+* Fixed:    WordPress 5.3.1 compatibility. Also added the new @redux account to the plugin.
 
-= Can I use the Gutenberg Template, Layout, and Pattern Library on client websites? =
+= 3.6.15 =
+* Fixed:    Redux API setSections would hang up when several sections with no ID share the same title.
 
-Yes! You can certainly use Redux on yours as well as your client's websites.
+= 3.6.14 =
+* Fixed:    #3583:  Import failing when max_input_vars exceeded.  Function moved to ajax_save to avoid this issue.
 
-= Will Redux slow down my website? =
+= 3.6.13 =
+* Skipping.  I'm superstitious! - kp
 
-Absolutely not! The Gutenberg Template, Layout, and Pattern Library plugin is built with ease and performance in mind. Its module architecture and the clean code keep it extremely fast. Every performance issue that seems to be coming from Redux is actually the integration code of third-party developers. If you're having issues let us know, and we'll try to help you out.
+= 3.6.12.2 =
+* Fixed:    #3586:  Database not saving properly in 'network' mode.  Thanks @Tofandel.
+* Fixed:    #3584:  Improved fox for #3580.  Thanks @Enchiridion.
+
+= 3.6.12.1 =
+* Fixed:    #3580 - 'tax_query' array in args for WordPress data arg throwing a string conversation error.
+
+= 3.6.12 =
+* Fixed:    #3577 - Added isset to REMOTE_ADDR check to prevent error.
+
+= 3.6.11 =
+* Fixed:    #3561, #3562 - Not all selectors in async typography were properly formed, causing them not to render properly on screen.
+
+= 3.6.10 =
+* Updated   Google font update.
+* Updated:  #3447 - Updated RTL CSS.  Thanks @Abolfazlrt.
+* Fixed:    Duplicate ID warnings.
+* Fixed:    http warnings in https environments.
+* Fixed:    #3539 - Checkbox label not appearing unless 'desc' was set. Thanks @Enchiridion.
+* Fixed:    #3547 - ace_editor not rendering properly within a subsection. Thanks @Tofandel.
+* Fixed:    #3534 - Fix invalid CSS in asycn_typography (trailing commas).  Thanks @ksere
+* Fixed:    Spacing between Save and Reset buttons.
+* Added:    #3285 - dir and url filters for customizer extension.  Thanks @aaronhuisinga.
+            add_filter ("redux/extension/customizer/dir", $dir)
+            add_filter ("redux/extension/customizer/url", $url)
+
+= 3.6.9 =
+* Fixed:    Bypassing a WP bug where the gallery field would show a spinner on first open with no selected images.
+* Fixed:    #3512 - Image select in tile mode not highlighting default.
+
+= 3.6.8 =
+* Fixed:    Error in AJAX save due to incorrect object reference in redux.js.
+* Fixed:    Removed unused set_transient in welcome routine.  It was causing slow queries.
+* Updated:  Google Font update.
+* Fixed:    #3440: Parent object not being properly set in the Redux filesystem.
+* Fixed:    Color picker CSS issues as a result of WP 4.9.
+* Fixed:    #3429 - Select2 Sortable needed jQuery Sortable dependency.
+* Fixed:    Admin noticies when multiple instances of Redux running not displaying per panel.
+
+= 3.6.7.7 =
+* Fixed:    Filesystem path correction.
+* Fixed:    #3414: Incorrect classname causing an error on load, via the filesystem API.
+* Fixed:    #3413 - Restored old code allowing non array value for mode. This is for backward compatibility 
+            only and is unsupported.
+* Fixed:    #3410, #3409 - Dimensions field output causing index errors when mode not set in option array.
+* Fixed:    #3406 - javascript hasClass improperly used, affected customizer.
+* Fixed:    Array declarations PHP 7.1 now requires.
+* Updated:  Updated newsletter subscribe submit to support our newer newsletter server.
+* Fixed:    #3379 - select_image field not properly displaying default.  'default' arg must now be the 
+            full path to default image.
+* Updated:  Google Fonts.
+
+= 3.6.6 =
+* Misspelled class name is system info compiler causing System Status to fail.
+* #3359 - Responsive issue on option panel.  Too much blank space on panel in smartphone mode.
+* #2914, #3356 - Default image_select preset image not selected.  This was originally by design.  Now it's a thing.
+* Update:   Parsedown.php for PHP 7.x
+* Fixed:    System status improperly reporting writable status on upload folder.
+* Fixed:    #3124 - User submitted 'current_user_can' failing on PHP version <= 3.5.13.  Thanks for the assist, @sourabgupta88
+* Modified: #3321 - Font subset in typography not rendering on IE and Edge (Seriously?  People still use those?)
+* Modified: PHP7 compatibility.
+
+= 3.6.5 =
+* Modified: #3321 - Font subset in typography not rendering on IE and Edge (Seriously?  People still use those?)
+* Fixed:    #3293 - Required not liking/hiding fields with switch default of 'false'.
+* Fixed:    Remove leftover var_dump from the core.
+* Fixed:    Tracking and newsletter popups were failing due to broken javascript.
+* Fixed:    #3291: Required with parent as an array not checking properly.  Someone took out my object check!! - kp
+* Modified: Date field calander now renders on .redux-container div.
+* Updated:  googlegonts.php file.
+* Modified: = and != required statements now use typesafe comparisons.
+* Fixed:    link_color field now properly displays all color fields.
+* Added:    link_color field now included 'focus' color block.
+* Modified: Re-styled link_color field to be more inline with other fields of it's type, that is, it looks better.
+* Added:    'title' attribute to image_select field, since 'alt' was no longer working to display hover tooltip.
+* Fixed:    Default data not saving correctly in sorter field.
+
+
+= 3.6.4 =
+* Modified: Changed gitignore file to exclude sublime text files.
+* Fixed:    #2966 - Translation bug. Identified and fixed by @iiandrade. Thanks!
+* Modified: Generated all CSS map files to get rid of Chrome warnings.
+* Added:    Required for the Advanced Customizer thanks to @britner!
+* Modified: Various customizer fixes and changes to match new styles.
+* Modified: Customizer only code in Redux.js, moved to the customizer.js file.
+* Modified: Isolated Redux CSS to be nested and not affect other products or WP UI.
+* Added:    #3222 - HUGE update by @enchiridion to allow for advanced and complicated permissions. WTG!
+* Added:    New hooks for how Extension APIs are called. Much cleaner.
+* Fixed:    #3214 - Typography color field not triggering compiler hook.
+* Fixed:    #3201 - Index error when using compiler argument with spinner field.
+* Updated:  #3189 - PHP7 compatibility for preg_replace validation.
+* Fixed:    #3186 - Multi text field not removing single field when clicking "Remove".
+* Fixed:    #3180, #2641 - Button set multi mode saving incorrectly.  Please check your code for a possible backward compatibility issue when using this mode.  The foreach() function with an empty() check must now be used, versus individual array keys as only selected options are saved to the database.
+
+= 3.6.3 =
+* Modified: Change customizer hover styles to match WP 4.7.
+* Modified: #3169 - print_r of wpdb queries in dev_mode removed.
+* Fixed: #3159 - Support for SVG in gallery media selection.
+* Fixed: #3158 - PHP warning for _validate_values function when extensions installed on PHP7.
+
+= 3.6.2 =
+* Fixed:   #3105 - link_color output failing due to PHP error.
+* Fixed:   #3103 - WP 4.6 forces new default date format, breaking date validation.
+* Fixed:   Typography subsets error due to typo.
+* Fixed:   Extra dead files on WP.org repo. Bah SVN.
+
+= 3.6.1 =
+* Removed   Empty PHP file from editor field.
+* Modified: Replaced class primary function name in browser.php to __construct for PHP7 compatibility.
+* Fixed:    #3051 - Color_RBGA field RGBA value outputting zeros when color is left blank.
+* Fixed:    #3048 - Subsection tabs not including specified section class name.
+* Fixed:    Incorrect string comparison result in admin link check.  Thanks @ksere.
+* Fixed:    Check value exists before validating when used with Metabox extension.  Thanks @Enchiridion
+* Fixed:    Empty values not passing to validation_callback.
+* Fixed:    Javascript error in customizer javascript, preventing save of changed options.
+* Fixed:    #3019 - Section descriptions incorrect when opt_name contains digits.
+* Reverted: Changes to typography.  The on input variable solution was not working.
+* Fixed:    Support URL has generator was failing with an error.
+* Changed:  Typography field is now only ONE input variable. Should reduce our
+            max_input_vars errors dramatically.
+* Fixed:    Some XSS vulnerabilities only available in the backend when authenticated as a user.
+* Fixed:    Deleted old deleted files stuck in our WP.org SVN repo.
+
+
+= 3.6.0.2 =
+* Fixed     Outdated customizer.min.js on wp.org causing customizer failure.
+
+= 3.6.0.1 =
+* Fixed     Outdated redux.min.js on wp.org causing option panel failure.
+* Fixed:    #2936 - Border field outputting px with blank value.
+* Fixed:    Resolved Theme-Check php shortcode false notice.
+* Modified: No more major redirect for the Redux page, only on first install with the plugin.
+* Fixed:    IE11 bug in the customizer. Thanks @anikitas!
+* Fixed:    Customizer path issues
+* Added:    New default arguments filter by opt_name and type.  :)
+* Fixed:    #2903 - False positive flag in border field JS.  Avast doesn't like empty document ready statements.
+* Fixed:    #2880 - More issues with the extensions_url routine.
+* Fixed:    #2876 - Fixing more unvetted user contributions.
+* Modified: #2855 - Extensions now have a helper class to help composer-based installs. Thanks @2ndkauboy!
+* Fixed:    #2857 - Required 'contains' not properly evaluating with checkboxes.
+* Fixed:    #2831 - Localization was complete broken.
+* Fixed:    #2832 - CSS conflicts with Rev Slider (Hey, Rev Slider guys, you don't have to load your CSS on every admin page.  Really?)
+* Fixed:    Leftover debug echo line in basic customizer extension.
+* Added:    EXPERIMENTAL:  New parsing code in an effort to break the 1000 max_input_var issue that crops up from time to time. Thanks, @harunbasic
+* Added:    EXPERIMENTAL:  "Bugfix" for extension_url in an effort to make it correct.  Thanks, @ottok

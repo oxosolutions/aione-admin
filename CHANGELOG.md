@@ -83,3 +83,7 @@ FIXED: Bugs Fixed
 
 ## 1.7.0.0 18-03-2025
 FIXED: Bugs Fixed
+
+## 1.7.0.1 18-03-2025
+FIXED: Fix for php 8.2
+

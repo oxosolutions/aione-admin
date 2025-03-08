@@ -821,10 +821,13 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                         $arr[ $key ] = $value;
                     }
 
-                    $lcFonts = array_change_key_case( $this->field['custom_fonts'] );
-                    foreach ( $lcFonts as $group => $fontArr ) {
-                        foreach ( $fontArr as $key => $value ) {
-                            $arr[ strtolower( $key ) ] = $key;
+                    // Ensure the fonts array is NOT empty
+                    if ( ! empty( $this->field['custom_fonts'] ) && is_array( $this->field['custom_fonts']  ) ) {
+                        $lcFonts = array_change_key_case( $this->field['custom_fonts'] );
+                        foreach ( $lcFonts as $group => $fontArr ) {
+                            foreach ( $fontArr as $key => $value ) {
+                                $arr[ strtolower( $key ) ] = $key;
+                            }
                         }
                     }
 

@@ -80,3 +80,6 @@ FIXED: Bugs Fixed
 
 ## 1.6.0.3 25-05-2022
 FIXED: Bugs Fixed
+
+## 1.7.0.0 18-03-2025
+FIXED: Bugs Fixed
